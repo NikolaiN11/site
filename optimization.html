@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav-cards.css">
 </head>
 
 <body>
@@ -61,32 +62,66 @@
         </div>
     </section>
 
+    <!-- Навигация по разделам -->
+    <section class="section pt-8 pb-12">
+        <div class="container">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Карточка 1 -->
+                <a href="#sim" class="nav-card group">
+                    <div class="nav-card-icon">
+                        <img src="images/opt_sim.png" alt="Оптимизация СиМ">
+                    </div>
+                    <h3 class="nav-card-title">ОПТИМИЗАЦИЯ СиМ</h3>
+                </a>
+
+                <!-- Карточка 2 -->
+                <a href="#productivity" class="nav-card group">
+                    <div class="nav-card-icon">
+                        <img src="images/opt_productivity.png" alt="Производительность">
+                    </div>
+                    <h3 class="nav-card-title">ПОВЫШЕНИЕ ПРОИЗВОДИТЕЛЬНОСТИ</h3>
+                </a>
+
+                <!-- Карточка 3 -->
+                <a href="#control" class="nav-card group">
+                    <div class="nav-card-icon">
+                        <img src="images/opt_control.png" alt="Точки контроля">
+                    </div>
+                    <h3 class="nav-card-title">ВНЕДРЕНИЕ ТОЧЕК КОНТРОЛЯ</h3>
+                </a>
+
+                <!-- Карточка 4 -->
+                <a href="#quality" class="nav-card group">
+                    <div class="nav-card-icon">
+                        <img src="images/opt_quality.png" alt="Управление качеством">
+                    </div>
+                    <h3 class="nav-card-title">УПРАВЛЕНИЕ КАЧЕСТВОМ</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- 1. ОПТИМИЗАЦИЯ СиМ -->
-    <section class="section">
+    <section id="sim" class="section">
         <div class="container">
             <h2 class="section-title fade-in">Оптимизация Сырья и Материалов (СиМ)</h2>
 
             <!-- Карточки результатов -->
             <div class="grid md:grid-cols-3 gap-6 mb-12">
-                <div class="card fade-in p-6 shadow-md border-t-0 flex items-center justify-center text-center"
+                <div class="card fade-in text-center p-8 shadow-md border-t-0 flex items-center justify-center"
                     style="background: var(--color-bg-secondary); border-radius: 16px;">
-                    <p class="font-bold text-[#1a1a1a]">
-                        Расширение пула поставщиков и оптимизация спецификаций = <span
-                            style="color: var(--color-accent);">экономия > 10%</span> на закупках сырья
-                    </p>
+                    <div class="text-lg font-bold leading-tight text-[#1a1a1a]">Расширение пула поставщиков и
+                        оптимизаций спецификаций = экономия > 10% на закупках сырья</div>
                 </div>
-                <div class="card fade-in p-6 shadow-md border-t-0 flex items-center justify-center text-center"
+                <div class="card fade-in text-center p-8 shadow-md border-t-0 flex items-center justify-center"
                     style="background: var(--color-bg-secondary); border-radius: 16px;">
-                    <p class="font-bold text-[#1a1a1a]">
-                        Снижение стоимости упаковочных материалов на <span style="color: var(--color-sage);">10%</span>
-                    </p>
+                    <div class="text-lg font-bold leading-tight text-[#1a1a1a]">Снижение стоимости упаковочных
+                        материалов на 10%</div>
                 </div>
-                <div class="card fade-in p-6 shadow-md border-t-0 flex items-center justify-center text-center"
+                <div class="card fade-in text-center p-8 shadow-md border-t-0 flex items-center justify-center"
                     style="background: var(--color-bg-secondary); border-radius: 16px;">
-                    <p class="font-bold text-[#1a1a1a]">
-                        Переработка коробов, изменение высоты паллета = повышение «утилизации борта» одноярусных ТС на
-                        <span style="color: var(--color-accent);">30%</span>
-                    </p>
+                    <div class="text-lg font-bold leading-tight text-[#1a1a1a]">Переработка коробов, изменение высоты
+                        паллета = повышение «утилизации борта» одноярусных ТС на 30%</div>
                 </div>
             </div>
 
@@ -98,27 +133,26 @@
                             <div class="check-icon"><img
                                     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
                                     alt="check"></div>
-                            <span><strong>Внедряем применение</strong> более эффективных сырьевых аналогов</span>
+                            <span>Внедряем применение более эффективных сырьевых аналогов</span>
                         </li>
                         <li>
                             <div class="check-icon"><img
                                     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
                                     alt="check"></div>
-                            <span><strong>Расширяем портфель поставщиков</strong>, оптимизируя условия поставки
+                            <span>Расширяем портфель поставщиков, оптимизируя условия поставки материалов</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><img
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
+                                    alt="check"></div>
+                            <span>Увеличиваем эффективность логистики за счёт переработки и оптимизации таро-упаковочных
                                 материалов</span>
                         </li>
                         <li>
                             <div class="check-icon"><img
                                     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
                                     alt="check"></div>
-                            <span><strong>Увеличиваем эффективность логистики</strong> за счёт переработки и оптимизации
-                                таро-упаковочных материалов</span>
-                        </li>
-                        <li>
-                            <div class="check-icon"><img
-                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
-                                    alt="check"></div>
-                            <span><strong>Вводим процедуры</strong>, позволяющие минимизировать неликвиды</span>
+                            <span>Вводим процедуры, позволяющие минимизировать неликвиды</span>
                         </li>
                     </ul>
                 </div>
@@ -134,33 +168,25 @@
     </section>
 
     <!-- 2. ПОВЫШЕНИЕ ПРОИЗВОДИТЕЛЬНОСТИ -->
-    <section class="section section-alt">
+    <section id="productivity" class="section section-alt">
         <div class="container">
             <h2 class="section-title fade-in">Повышение производительности</h2>
 
             <!-- Карточки результатов -->
-            <div class="grid md:grid-cols-3 gap-6 mb-12">
-                <div class="card fade-in p-6 shadow-md border-t-0 flex items-center justify-center text-center"
-                    style="background: var(--color-bg-secondary); border-radius: 16px;">
-                    <p class="font-bold text-[#1a1a1a]">
-                        Снижение перевесов с 3% до 0,5% по штучной продукции = <span
-                            style="color: var(--color-sage);">экономия 300 млн. руб. / год</span>
-                    </p>
-                </div>
-                <div class="card fade-in p-6 shadow-md border-t-0 flex items-center justify-center text-center"
-                    style="background: var(--color-bg-secondary); border-radius: 16px;">
-                    <p class="font-bold text-[#1a1a1a]">
-                        Изменение схемы укладки сосисок = <span style="color: var(--color-accent);">снижение на
-                            15%</span> персонала линии
-                    </p>
-                </div>
-                <div class="card fade-in p-6 shadow-md border-t-0 flex items-center justify-center text-center"
-                    style="background: var(--color-bg-secondary); border-radius: 16px;">
-                    <p class="font-bold text-[#1a1a1a]">
-                        Изменение технологии приготовления фарша – <span style="color: var(--color-sage);">ускорение
-                            процесса на 10%</span>
-                    </p>
-                </div>
+            <div class="card fade-in text-center p-8 shadow-md border-t-0 flex items-center justify-center"
+                style="background: var(--color-bg-secondary); border-radius: 16px;">
+                <div class="text-lg font-bold leading-tight text-[#1a1a1a]">Снижение перевесов с 3% до 0,5% по
+                    штучной продукции = экономия 300 млн. руб. / год</div>
+            </div>
+            <div class="card fade-in text-center p-8 shadow-md border-t-0 flex items-center justify-center"
+                style="background: var(--color-bg-secondary); border-radius: 16px;">
+                <div class="text-lg font-bold leading-tight text-[#1a1a1a]">Изменение схемы укладки сосисок =
+                    снижение на 15% персонала линии</div>
+            </div>
+            <div class="card fade-in text-center p-8 shadow-md border-t-0 flex items-center justify-center"
+                style="background: var(--color-bg-secondary); border-radius: 16px;">
+                <div class="text-lg font-bold leading-tight text-[#1a1a1a]">Изменение технологии приготовления фарша
+                    – ускорение процесса на 10%</div>
             </div>
 
             <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -179,28 +205,27 @@
                             <div class="check-icon"><img
                                     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
                                     alt="check"></div>
-                            <span><strong>Выявляем «узкие места»</strong> на производственных линиях, предлагаем решения
-                                по устранению</span>
+                            <span>Выявляем «узкие места» на производственных линиях, предлагаем решения по
+                                устранению</span>
                         </li>
                         <li>
                             <div class="check-icon"><img
                                     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
                                     alt="check"></div>
-                            <span><strong>Проектируем изменение</strong> производственных линий для повышения
-                                эффективности</span>
+                            <span>Проектируем изменение производственных линий для повышения эффективности</span>
                         </li>
                         <li>
                             <div class="check-icon"><img
                                     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
                                     alt="check"></div>
-                            <span><strong>Занимаемся вводом/изменениями</strong> технологических карт</span>
+                            <span>Занимаемся вводом/изменениями технологических карт</span>
                         </li>
                         <li>
                             <div class="check-icon"><img
                                     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
                                     alt="check"></div>
-                            <span><strong>Оптимизируем тех процессы</strong> через нормирование и план-факт анализ
-                                (участок/операция)</span>
+                            <span>Оптимизируем тех процессы через нормирование и план факт анализ в разрезе
+                                участок/операция</span>
                         </li>
                     </ul>
                 </div>
@@ -209,35 +234,32 @@
     </section>
 
     <!-- 3. ВНЕДРЕНИЕ ТОЧЕК КОНТРОЛЯ -->
-    <section class="section">
+    <section id="control" class="section">
         <div class="container">
             <h2 class="section-title fade-in">Внедрение точек контроля</h2>
 
             <!-- Карточки результатов (4 шт) -->
-            <div class="grid md:grid-cols-4 gap-4 mb-12">
-                <div class="card fade-in p-6 shadow-md border-t-0 flex items-center justify-center text-center min-h-[120px]"
+            <!-- Карточки результатов (4 шт) -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="card fade-in text-center p-6 shadow-md border-t-0 flex items-center justify-center"
                     style="background: var(--color-bg-secondary); border-radius: 16px;">
-                    <p class="font-bold text-[#1a1a1a] text-sm md:text-base">
-                        Применение инструментального входного контроля цвета СиМов
-                    </p>
+                    <div class="text-base font-bold leading-tight text-[#1a1a1a]">Применение инструментального входного
+                        контроля цвета СиМов</div>
                 </div>
-                <div class="card fade-in p-6 shadow-md border-t-0 flex items-center justify-center text-center min-h-[120px]"
+                <div class="card fade-in text-center p-6 shadow-md border-t-0 flex items-center justify-center"
                     style="background: var(--color-bg-secondary); border-radius: 16px;">
-                    <p class="font-bold text-[#1a1a1a] text-sm md:text-base">
-                        Внедрение инструментального контроля плотности продукта
-                    </p>
+                    <div class="text-base font-bold leading-tight text-[#1a1a1a]">Внедрение инструментального контроля
+                        плотности продукта</div>
                 </div>
-                <div class="card fade-in p-6 shadow-md border-t-0 flex items-center justify-center text-center min-h-[120px]"
+                <div class="card fade-in text-center p-6 shadow-md border-t-0 flex items-center justify-center"
                     style="background: var(--color-bg-secondary); border-radius: 16px;">
-                    <p class="font-bold text-[#1a1a1a] text-sm md:text-base">
-                        Использование жиро-анализаторов для сортировки сырья
-                    </p>
+                    <div class="text-base font-bold leading-tight text-[#1a1a1a]">Использование жиро-анализаторов для
+                        сортировки сырья</div>
                 </div>
-                <div class="card fade-in p-6 shadow-md border-t-0 flex items-center justify-center text-center min-h-[120px]"
+                <div class="card fade-in text-center p-6 shadow-md border-t-0 flex items-center justify-center"
                     style="background: var(--color-bg-secondary); border-radius: 16px;">
-                    <p class="font-bold text-[#1a1a1a] text-sm md:text-base">
-                        Внедрение контроля работы линий / сотрудников в режиме реального времени
-                    </p>
+                    <div class="text-base font-bold leading-tight text-[#1a1a1a]">Внедрение контроля работы линий /
+                        сотрудников в режиме реального времени</div>
                 </div>
             </div>
 
@@ -248,29 +270,28 @@
                             <div class="check-icon"><img
                                     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
                                     alt="check"></div>
-                            <span><strong>Комплексное обследование производства</strong> на предмет рационального
-                                применения контролей, создание уникальных точек</span>
+                            <span>Проводим комплексное обследование производства на предмет рационального применения
+                                контролей, создаём уникальные точки контроля</span>
                         </li>
                         <li>
                             <div class="check-icon"><img
                                     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
                                     alt="check"></div>
-                            <span><strong>Внедрение инструментальных контролей</strong> для объективной оценки и
-                                сравнения СиМов с базой эталонов</span>
-                        </li>
-                        <li>
-                            <div class="check-icon"><img
-                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
-                                    alt="check"></div>
-                            <span><strong>Потоковое измерение плотности</strong> для сравнения продукта с базой
+                            <span>Внедряем инструментальные контроли для объективной оценки и сравнения СиМов с базой
                                 эталонов</span>
                         </li>
                         <li>
                             <div class="check-icon"><img
                                     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
                                     alt="check"></div>
-                            <span><strong>Использование жиро-анализаторов</strong> для точной дифференциации входящего
-                                сырья и качества собственного ММО</span>
+                            <span>Применяем потоковое измерение плотности для сравнения продукта с базой эталонов</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><img
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
+                                    alt="check"></div>
+                            <span>Используем жиро-анализаторы для точной дифференциации входящего сырья и качества
+                                собственного ММО</span>
                         </li>
                     </ul>
                 </div>
@@ -286,29 +307,26 @@
     </section>
 
     <!-- 4. УПРАВЛЕНИЕ КАЧЕСТВОМ -->
-    <section class="section section-alt">
+    <section id="quality" class="section section-alt">
         <div class="container">
             <h2 class="section-title fade-in">Управление качеством</h2>
 
             <!-- Карточки результатов (3 шт) -->
             <div class="grid md:grid-cols-3 gap-6 mb-12">
-                <div class="card fade-in p-6 shadow-md border-t-0 flex items-center justify-center text-center"
+                <div class="card fade-in text-center p-8 shadow-md border-t-0 flex items-center justify-center"
                     style="background: var(--color-bg-secondary); border-radius: 16px;">
-                    <p class="font-bold text-[#1a1a1a]">
-                        Применение базы эталонов при контроле
-                    </p>
+                    <div class="text-lg font-bold leading-tight text-[#1a1a1a]">Применение базы эталонов при контроле
+                    </div>
                 </div>
-                <div class="card fade-in p-6 shadow-md border-t-0 flex items-center justify-center text-center"
+                <div class="card fade-in text-center p-8 shadow-md border-t-0 flex items-center justify-center"
                     style="background: var(--color-bg-secondary); border-radius: 16px;">
-                    <p class="font-bold text-[#1a1a1a]">
-                        Нами создано <span style="color: var(--color-sage);">> 100</span> различных точек контроля
-                    </p>
+                    <div class="text-lg font-bold leading-tight text-[#1a1a1a]">Нами создано > 100 различных точек
+                        контроля</div>
                 </div>
-                <div class="card fade-in p-6 shadow-md border-t-0 flex items-center justify-center text-center"
+                <div class="card fade-in text-center p-8 shadow-md border-t-0 flex items-center justify-center"
                     style="background: var(--color-bg-secondary); border-radius: 16px;">
-                    <p class="font-bold text-[#1a1a1a]">
-                        Выявление отклонений в местах их возникновения, а не в конце тех процесса
-                    </p>
+                    <div class="text-lg font-bold leading-tight text-[#1a1a1a]">Выявление отклонений в местах их
+                        возникновения, а не в конце тех процесса</div>
                 </div>
             </div>
 
@@ -327,21 +345,22 @@
                             <div class="check-icon"><img
                                     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
                                     alt="check"></div>
-                            <span><strong>Формируем концепцию</strong> контроля качества под каждого клиента</span>
+                            <span>Формируем концепцию контроля качества под каждого клиента</span>
                         </li>
                         <li>
                             <div class="check-icon"><img
                                     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
                                     alt="check"></div>
-                            <span><strong>Широкий опыт внедрения</strong> точек контроля качества: от чек-листов до
-                                доработки учётных систем клиентов / ТГ-ботов</span>
+                            <span>Широкий опыт внедрения точек контроля качества от чек-листов до доработки учётных
+                                систем клиентов / ТГ-ботов</span>
                         </li>
                         <li>
                             <div class="check-icon"><img
                                     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
                                     alt="check"></div>
-                            <span><strong>Переводим решение по качеству</strong> от субъективных оценок к автоматической
-                                верификации результатов (инструментальный контроль, база эталонов, тех. карты)</span>
+                            <span>Переводим принятие решений по качеству от субъективных оценок к автоматической
+                                верификации результатов за счёт инструментальных средств контроля и базы эталонов /
+                                технологических карт</span>
                         </li>
                     </ul>
                 </div>
