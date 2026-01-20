@@ -1289,8 +1289,8 @@ textarea:focus {
 }
 
 .team-avatar {
-    width: 130px;
-    height: 130px;
+    width: 165px;
+    height: 165px;
     border-radius: 50%;
     overflow: hidden;
     position: relative;
