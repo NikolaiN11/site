@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Smart Solutions — Маркетинговые услуги: исследования, запуск брендов, ценовое позиционирование, дизайн">
+    <title>Маркетинг — Smart Solutions</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💡</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav-cards.css">
+</head>
+
+<body>
+    <!-- НАВИГАЦИЯ -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="images/logo.png" alt="Smart Solutions" class="h-10 w-auto">
+                    <span class="font-bold text-lg">Smart Solutions</span>
+                </a>
+                <div class="desktop-nav hidden md:flex items-center gap-1">
+                    <a href="marketing.html" class="nav-link active">Маркетинг</a>
+                    <a href="it.html" class="nav-link">IT</a>
+                    <a href="optimization.html" class="nav-link">Оптимизация производства</a>
+                    <a href="about.html" class="nav-link">О нас</a>
+                    <a href="contacts.html" class="btn-primary ml-4">Контакты</a>
+                </div>
+                <button class="mobile-menu-btn flex md:hidden flex-col gap-1.5 p-2" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <a href="marketing.html" class="nav-link text-xl">Маркетинг</a>
+        <a href="it.html" class="nav-link text-xl">IT</a>
+        <a href="optimization.html" class="nav-link text-xl">Оптимизация производства</a>
+        <a href="about.html" class="nav-link text-xl">О нас</a>
+        <a href="contacts.html" class="btn-primary mt-4">Контакты</a>
+    </div>
+
+    <!-- HERO Маркетинг -->
+    <section class="hero relative overflow-hidden" style="min-height: auto; padding: 6rem 0 4rem;">
+        <div class="container relative z-10">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-6 text-center fade-in">
+                <span class="gradient-text">Маркетинг</span>
+            </h1>
+            <p class="text-lg text-center max-w-3xl mx-auto fade-in" style="color: var(--color-text-secondary);">
+                Комплексные маркетинговые решения для FMCG-компаний
+            </p>
+        </div>
+    </section>
+
+    <!-- Навигация по разделам -->
+    <section class="section" style="padding-top: 2rem; padding-bottom: 2rem;">
+        <div class="container">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Карточка 1: Анализ рынка -->
+                <a href="#research"
+                    class="card fade-in group cursor-pointer block hover:no-underline text-center p-8 transition-all hover:-translate-y-2">
+                    <div class="w-24 h-24 mx-auto mb-6 rounded-2xl flex items-center justify-center shadow-sm"
+                        style="background: var(--color-accent-light); border: 1px solid rgba(181, 112, 77, 0.2);">
+                        <img src="images/marketing_icon_research.png" alt="Исследования"
+                            class="w-16 h-16 object-contain opacity-90 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <h3 class="font-bold text-lg leading-tight group-hover:text-gradient">Глубокий анализ рынка через
+                        исследования</h3>
+                </a>
+
+                <!-- Карточка 2: Запуск брендов -->
+                <a href="#brands"
+                    class="card fade-in group cursor-pointer block hover:no-underline text-center p-8 transition-all hover:-translate-y-2">
+                    <div class="w-24 h-24 mx-auto mb-6 rounded-2xl flex items-center justify-center shadow-sm"
+                        style="background: var(--color-accent-light); border: 1px solid rgba(181, 112, 77, 0.2);">
+                        <img src="images/marketing_icon_brand.png" alt="Бренды"
+                            class="w-16 h-16 object-contain opacity-90 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <h3 class="font-bold text-lg leading-tight group-hover:text-gradient">Разработка и запуск брендов
+                        под ключ</h3>
+                </a>
+
+                <!-- Карточка 3: Ценовое позиционирование -->
+                <a href="#pricing"
+                    class="card fade-in group cursor-pointer block hover:no-underline text-center p-8 transition-all hover:-translate-y-2">
+                    <div class="w-24 h-24 mx-auto mb-6 rounded-2xl flex items-center justify-center shadow-sm"
+                        style="background: var(--color-accent-light); border: 1px solid rgba(181, 112, 77, 0.2);">
+                        <img src="images/marketing_icon_pricing.png" alt="Ценообразование"
+                            class="w-16 h-16 object-contain opacity-90 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <h3 class="font-bold text-lg leading-tight group-hover:text-gradient">Определение ценового
+                        позиционирования</h3>
+                </a>
+
+                <!-- Карточка 4: Дизайн -->
+                <a href="#design"
+                    class="card fade-in group cursor-pointer block hover:no-underline text-center p-8 transition-all hover:-translate-y-2">
+                    <div class="w-24 h-24 mx-auto mb-6 rounded-2xl flex items-center justify-center shadow-sm"
+                        style="background: var(--color-accent-light); border: 1px solid rgba(181, 112, 77, 0.2);">
+                        <img src="images/marketing_icon_design.png" alt="Дизайн"
+                            class="w-16 h-16 object-contain opacity-90 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <h3 class="font-bold text-lg leading-tight group-hover:text-gradient">Работа с дизайнами, обновление
+                        портфеля</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- РАЗДЕЛ 1: Глубокий анализ рынка -->
+    <section id="research" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title fade-in">Глубокий анализ рынка через исследования</h2>
+
+            <!-- Статистика -->
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <div class="card fade-in text-center p-8 shadow-md border-t-0"
+                    style="background: var(--color-bg-secondary); border-radius: 16px;">
+                    <div class="text-sm font-semibold mb-2 uppercase tracking-wider"
+                        style="color: var(--color-accent);">Бюджет исследований</div>
+                    <div class="text-3xl font-bold text-[#1a1a1a]">> 100 млн руб</div>
+                </div>
+                <div class="card fade-in text-center p-8 shadow-md border-t-0"
+                    style="background: var(--color-bg-secondary); border-radius: 16px;">
+                    <div class="text-sm font-semibold mb-2 uppercase tracking-wider" style="color: var(--color-sage);">
+                        Проведено исследований</div>
+                    <div class="text-3xl font-bold text-[#1a1a1a]">> 400 шт</div>
+                </div>
+                <div class="card fade-in text-center p-8 shadow-md border-t-0"
+                    style="background: var(--color-bg-secondary); border-radius: 16px;">
+                    <div class="text-sm font-semibold mb-2 uppercase tracking-wider"
+                        style="color: var(--color-accent);">Инхаус отделы</div>
+                    <div class="text-lg font-bold leading-tight text-[#1a1a1a]">Созданы в крупнейших FMCG компаниях
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Левая колонка: список -->
+                <div class="fade-in">
+                    <ul class="check-list space-y-4">
+                        <li>
+                            <div class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg></div>
+                            <span>Проектируем исследование под бизнес-решение</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg></div>
+                            <span>Подбираем методологию (ораганолептические исследования, brand health, тестирование
+                                рекламы, нейминга, дизайнов и т.д.)</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg></div>
+                            <span>Программируем и запускаем (анкеты, логика, тесты) через панели</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg></div>
+                            <span>Анализируем данные и переводим в понятные выводы</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg></div>
+                            <span>Выдаём рекомендации и план действий с презентацией для менеджмента</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Правая колонка: изображения -->
+                <div class="fade-in flex flex-col items-center gap-8">
+                    <div class="image-frame inline-block shadow-lg">
+                        <img src="images/research_chart_1.png" alt="Привлекательность концепций"
+                            style="max-width: 600px; width: 100%; height: auto;" class="rounded-lg">
+                    </div>
+                    <div class="image-frame inline-block shadow-lg">
+                        <img src="images/research_chart_2.png" alt="Конверсия и удержание"
+                            style="max-width: 600px; width: 100%; height: auto;" class="rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- РАЗДЕЛ 2: Разработка и запуск брендов -->
+    <section id="brands" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Разработка и запуск брендов под ключ</h2>
+            <p class="section-subtitle fade-in">концепция, позиционирование, дизайны</p>
+
+            <!-- Статистика -->
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <div class="card fade-in text-center p-8 shadow-md border-t-0"
+                    style="background: var(--color-bg-secondary); border-radius: 16px;">
+                    <div class="text-sm font-semibold mb-2 uppercase tracking-wider"
+                        style="color: var(--color-accent);">Запущено брендов</div>
+                    <div class="text-3xl font-bold text-[#1a1a1a]">> 10</div>
+                </div>
+                <div class="card fade-in text-center p-8 shadow-md border-t-0"
+                    style="background: var(--color-bg-secondary); border-radius: 16px;">
+                    <div class="text-sm font-semibold mb-2 uppercase tracking-wider" style="color: var(--color-sage);">
+                        Бренд #1</div>
+                    <div class="text-xl font-bold leading-tight text-[#1a1a1a]">В Светофоре в категории КИ</div>
+                </div>
+                <div class="card fade-in text-center p-8 shadow-md border-t-0"
+                    style="background: var(--color-bg-secondary); border-radius: 16px;">
+                    <div class="text-sm font-semibold mb-2 uppercase tracking-wider"
+                        style="color: var(--color-accent);">Разработано</div>
+                    <div class="text-3xl font-bold text-[#1a1a1a]">> 150 концептов</div>
+                    <div class="text-xs mt-1 text-gray-600">разных брендов</div>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-5 gap-12 items-center">
+                <!-- Левая колонка: список (3/5) -->
+                <div class="lg:col-span-3 fade-in">
+                    <ul class="check-list space-y-4">
+                        <li>
+                            <div class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg></div>
+                            <span>Находим свободную нишу и формулируем точку входа на рынок</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg></div>
+                            <span>Собираем позиционирование: аудитория, ценовой сегмент, роль бренда</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg></div>
+                            <span>Придумываем нейминг и архитектуру (линейка/саббренды)</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg></div>
+                            <span>Делаем айдентику и дизайн-систему (упаковка/носители/гайд)</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg></div>
+                            <span>Формируем УТП и продуктовые предложения, которые легко продавать</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg></div>
+                            <span>Готовим запуск: ключевые сообщения, каналы, план внедрения</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Правая колонка: логотипы брендов (2/5) -->
+                <div class="lg:col-span-2 fade-in">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="image-frame p-6 flex items-center justify-center bg-white"><img
+                                src="images/brand_logo_1.png" alt="Brand 1"
+                                style="max-height: 85px; max-width: 100%; width: auto; height: auto;"></div>
+                        <div class="image-frame p-6 flex items-center justify-center bg-white"><img
+                                src="images/brand_logo_2.png" alt="Brand 2"
+                                style="max-height: 85px; max-width: 100%; width: auto; height: auto;"></div>
+                        <div class="image-frame p-6 flex items-center justify-center bg-white"><img
+                                src="images/brand_logo_3.png" alt="Brand 3"
+                                style="max-height: 85px; max-width: 100%; width: auto; height: auto;"></div>
+                        <div class="image-frame p-6 flex items-center justify-center bg-white"><img
+                                src="images/brand_logo_4.png" alt="Brand 4"
+                                style="max-height: 85px; max-width: 100%; width: auto; height: auto;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- РАЗДЕЛ 3: Ценовое позиционирование -->
+    <section id="pricing" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title fade-in">Определение ценового позиционирования</h2>
+
+            <!-- Статистика -->
+            <div class="grid md:grid-cols-2 gap-6 mb-12 max-w-4xl mx-auto">
+                <div class="card fade-in text-center p-8 shadow-md border-t-0"
+                    style="background: var(--color-bg-secondary); border-radius: 16px;">
+                    <div class="text-sm font-semibold mb-2 uppercase tracking-wider"
+                        style="color: var(--color-accent);">Выстраивание цен</div>
+                    <div class="text-3xl font-bold text-[#1a1a1a]">> 1 500 SKU</div>
+                </div>
+                <div class="card fade-in text-center p-8 shadow-md border-t-0"
+                    style="background: var(--color-bg-secondary); border-radius: 16px;">
+                    <div class="text-sm font-semibold mb-2 uppercase tracking-wider" style="color: var(--color-sage);">
+                        Портфель компании</div>
+                    <div class="text-2xl font-bold leading-tight text-[#1a1a1a]">> 30 брендов и линеек</div>
+                    <div class="text-xs mt-1 text-gray-600">структурировано и разделено</div>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Левая колонка: список -->
+                <div class="fade-in">
+                    <ul class="check-list space-y-4">
+                        <li>
+                            <div class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg></div>
+                            <span>Строим ценовые купола по рынку и категориям</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg></div>
+                            <span>Сравниваем ваш портфель с рынком: где недооценены / переоценены</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg></div>
+                            <span>Выравниваем цены внутри портфеля компании</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg></div>
+                            <span>Разводим бренды/линейки по ролям в портфеле, убираем каннибализацию</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg></div>
+                            <span>Находим пустые и “ёмкие” ценовые ниши и что туда должно зайти</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg></div>
+                            <span>Даём решения: корректировки, выделение отдельных линеек или запуск новых, чтобы
+                                нарастить объём продаж</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Правая колонка: график -->
+                <div class="fade-in">
+                    <div class="software-window shadow-lg">
+                        <div class="window-header bg-[#f8f6f2] border-b border-[#e8e5e0]">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        </div>
+                        <div class="window-content bg-white p-6">
+                            <img src="images/pricing_chart.png" alt="Ценовое позиционирование" class="w-full">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- РАЗДЕЛ 4: Работа с дизайнами -->
+    <section id="design" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Работа с дизайнами, обновление текущего портфеля</h2>
+
+            <!-- Статистика -->
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div class="fade-in">
+                    <ul class="check-list space-y-4">
+                        <li>
+                            <div class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg></div>
+                            <span>Находим идею бренда и вытаскиваем её наружу — чтобы было понятно “кто мы” с первого
+                                взгляда.</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg></div>
+                            <span>Связываем дизайн с позиционированием — упаковка/айдентика начинают говорить тем же
+                                языком, что и бренд.</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg></div>
+                            <span>Делаем бренд заметным на полке — сильная композиция, контраст, читаемость, понятная
+                                иерархия.</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg></div>
+                            <span>Повышаем привлекательность и “хочется взять” — эстетика, характер и детали, которые
+                                цепляют.</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg></div>
+                            <span>Пересобираем визуальную систему целиком — логика, сетка, шрифты/цвета, носители: чтобы
+                                выглядело цельно и мощно.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fade-in">
+                    <!-- Здесь можно разместить какую-то картинку или графику для дизайна, если нужно -->
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Кейсы редизайна - полноширинный блок -->
+        <div class="fade-in mt-16">
+            <h3 class="text-center text-xl font-bold mb-10" style="color: var(--color-text-primary);">Примеры редизайна
+                упаковки</h3>
+
+            <div class="space-y-8 max-w-4xl mx-auto">
+                <!-- Кейс 1 -->
+                <div class="bg-gradient-to-r from-[#faf8f5] to-[#f5f2ed] p-8 rounded-3xl shadow-sm">
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-16">
+                        <!-- До -->
+                        <div class="text-center">
+                            <div
+                                class="inline-block px-5 py-2 rounded-full text-sm font-bold mb-4 bg-[#f0ebe5] text-[#8b7355] tracking-wide">
+                                ДО</div>
+                            <div class="bg-white p-4 rounded-2xl shadow-lg border border-gray-100">
+                                <img src="images/design_before_1.png" alt="До редизайна" class="rounded-xl"
+                                    style="max-width: 200px; height: auto;">
+                            </div>
+                        </div>
+
+                        <!-- Стрелка -->
+                        <div
+                            class="flex-shrink-0 hidden md:flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-[#b5704d] to-[#c9896a] text-white text-2xl font-bold shadow-md">
+                            →
+                        </div>
+                        <div
+                            class="flex-shrink-0 md:hidden flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-b from-[#b5704d] to-[#c9896a] text-white text-xl font-bold shadow-md rotate-90">
+                            →
+                        </div>
+
+                        <!-- После -->
+                        <div class="text-center">
+                            <div
+                                class="inline-block px-5 py-2 rounded-full text-sm font-bold mb-4 bg-[#d4edda] text-[#28a745] tracking-wide">
+                                ПОСЛЕ</div>
+                            <div class="bg-white p-4 rounded-2xl shadow-lg border-2 border-green-400/40">
+                                <img src="images/design_after_1.png" alt="После редизайна" class="rounded-xl"
+                                    style="max-width: 200px; height: auto;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Кейс 2 -->
+                <div class="bg-gradient-to-r from-[#f5f2ed] to-[#faf8f5] p-8 rounded-3xl shadow-sm">
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-16">
+                        <!-- До -->
+                        <div class="text-center">
+                            <div
+                                class="inline-block px-5 py-2 rounded-full text-sm font-bold mb-4 bg-[#f0ebe5] text-[#8b7355] tracking-wide">
+                                ДО</div>
+                            <div class="bg-white p-4 rounded-2xl shadow-lg border border-gray-100">
+                                <img src="images/design_before_2.png" alt="До редизайна" class="rounded-xl"
+                                    style="max-width: 200px; height: auto;">
+                            </div>
+                        </div>
+
+                        <!-- Стрелка -->
+                        <div
+                            class="flex-shrink-0 hidden md:flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-[#b5704d] to-[#c9896a] text-white text-2xl font-bold shadow-md">
+                            →
+                        </div>
+                        <div
+                            class="flex-shrink-0 md:hidden flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-b from-[#b5704d] to-[#c9896a] text-white text-xl font-bold shadow-md rotate-90">
+                            →
+                        </div>
+
+                        <!-- После -->
+                        <div class="text-center">
+                            <div
+                                class="inline-block px-5 py-2 rounded-full text-sm font-bold mb-4 bg-[#d4edda] text-[#28a745] tracking-wide">
+                                ПОСЛЕ</div>
+                            <div class="bg-white p-4 rounded-2xl shadow-lg border-2 border-green-400/40">
+                                <img src="images/design_after_2.png" alt="После редизайна" class="rounded-xl"
+                                    style="max-width: 200px; height: auto;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section-alt cta-section">
+        <div class="container">
+            <div class="max-w-3xl mx-auto text-center fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Готовы обсудить маркетинговые задачи?</h2>
+                <p style="color: var(--color-text-secondary);" class="mb-8 text-lg">Расскажите о ваших целях — мы
+                    предложим оптимальное решение</p>
+                <a href="contacts.html" class="btn-primary">Связаться с нами →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="images/logo.png" alt="Smart Solutions" class="h-10 w-auto">
+                        <span class="font-bold text-lg text-white">Smart Solutions</span>
+                    </div>
+                    <p class="text-sm max-w-md" style="color: #9c9690;">Увеличиваем прибыль компаний через маркетинг, IT
+                        и эффективность производства.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Навигация</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="marketing.html">Маркетинг</a></li>
+                        <li><a href="it.html">IT</a></li>
+                        <li><a href="optimization.html">Оптимизация</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Контакты</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="mailto:info@smartsolutions.ru">info@smartsolutions.ru</a></li>
+                        <li><a href="tel:+7XXXXXXXXXX">+7 (XXX) XXX-XX-XX</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center text-sm" style="color: #6b6660;">
+                <p>© 2025 Smart Solutions. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Smart Solutions — IT-стратегия: AI, компьютерное зрение, OLAP-аналитика, цифровые двойники">
+    <title>IT-стратегия — Smart Solutions</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💡</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav-cards.css">
+</head>
+
+<body>
+    <!-- НАВИГАЦИЯ -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="images/logo.png" alt="Smart Solutions" class="h-10 w-auto">
+                    <span class="font-bold text-lg">Smart Solutions</span>
+                </a>
+                <div class="desktop-nav hidden md:flex items-center gap-1">
+                    <a href="marketing.html" class="nav-link">Маркетинг</a>
+                    <a href="it.html" class="nav-link active">IT</a>
+                    <a href="optimization.html" class="nav-link">Оптимизация производства</a>
+                    <a href="about.html" class="nav-link">О нас</a>
+                    <a href="contacts.html" class="btn-primary ml-4">Контакты</a>
+                </div>
+                <button class="mobile-menu-btn flex md:hidden flex-col gap-1.5 p-2" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <a href="marketing.html" class="nav-link text-xl">Маркетинг</a>
+        <a href="it.html" class="nav-link text-xl">IT</a>
+        <a href="optimization.html" class="nav-link text-xl">Оптимизация производства</a>
+        <a href="about.html" class="nav-link text-xl">О нас</a>
+        <a href="contacts.html" class="btn-primary mt-4">Контакты</a>
+    </div>
+
+    <!-- HERO IT -->
+    <section class="hero relative overflow-hidden" style="min-height: auto; padding: 6rem 0 4rem;">
+        <div class="container relative z-10">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-6 text-center fade-in">
+                <span class="gradient-text">IT-стратегия</span> и цифровые решения
+            </h1>
+            <p class="text-lg text-center max-w-3xl mx-auto fade-in" style="color: var(--color-text-secondary);">
+                Автоматизация, аналитика и контроль качества для производственных предприятий
+            </p>
+        </div>
+    </section>
+
+    <!-- Навигация по разделам (как в маркетинге) -->
+    <section class="section pt-8 pb-12">
+        <div class="container">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Карточка 1 -->
+                <a href="#ai" class="nav-card group">
+                    <div class="nav-card-icon">
+                        <img src="images/it_icon_ai.png" alt="AI">
+                    </div>
+                    <h3 class="nav-card-title">AI-модели для производственных задач</h3>
+                </a>
+
+                <!-- Карточка 2 -->
+                <a href="#olap" class="nav-card group">
+                    <div class="nav-card-icon">
+                        <img src="images/it_icon_olap.png" alt="OLAP">
+                    </div>
+                    <h3 class="nav-card-title">OLAP-модели и BI-системы</h3>
+                </a>
+
+                <!-- Карточка 3 -->
+                <a href="#reports" class="nav-card group">
+                    <div class="nav-card-icon">
+                        <img src="images/it_icon_reports.png" alt="Reports">
+                    </div>
+                    <h3 class="nav-card-title">Интерактивные отчёты и уведомления</h3>
+                </a>
+
+                <!-- Карточка 4 -->
+                <a href="#quality" class="nav-card group">
+                    <div class="nav-card-icon">
+                        <img src="images/it_icon_quality.png" alt="Quality">
+                    </div>
+                    <h3 class="nav-card-title">Контроль качества end-to-end</h3>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- РАЗДЕЛ 1: AI-модели -->
+    <section id="ai" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title fade-in">AI-модели для производственных задач</h2>
+
+            <!-- Статистика -->
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <div class="card fade-in text-center p-8 shadow-md border-t-0"
+                    style="background: var(--color-bg-secondary); border-radius: 16px;">
+                    <div class="text-sm font-semibold mb-2 uppercase tracking-wider"
+                        style="color: var(--color-accent);">Автоматизация</div>
+                    <div class="text-lg font-bold leading-tight text-[#1a1a1a]">Контроль без миллионных бюджетов на
+                        SCADA</div>
+                </div>
+                <div class="card fade-in text-center p-8 shadow-md border-t-0"
+                    style="background: var(--color-bg-secondary); border-radius: 16px;">
+                    <div class="text-sm font-semibold mb-2 uppercase tracking-wider" style="color: var(--color-sage);">
+                        Скорость</div>
+                    <div class="text-lg font-bold leading-tight text-[#1a1a1a]">Внедрение за 1 месяц</div>
+                </div>
+                <div class="card fade-in text-center p-8 shadow-md border-t-0"
+                    style="background: var(--color-bg-secondary); border-radius: 16px;">
+                    <div class="text-sm font-semibold mb-2 uppercase tracking-wider"
+                        style="color: var(--color-accent);">Оцифровано</div>
+                    <div class="text-3xl font-bold text-[#1a1a1a]">> 200 ед.</div>
+                    <div class="text-xs mt-1 text-gray-600">оборудования с CV</div>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Левая колонка: список -->
+                <div class="fade-in">
+                    <ul class="check-list space-y-4">
+                        <li>
+                            <div class="check-icon"><img
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
+                                    alt="check"></div>
+                            <span><strong>Автообучение моделей</strong> — LVM-разметка вместо ручной, экономия времени в
+                                10+ раз, точность детекции 95%+</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><img
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
+                                    alt="check"></div>
+                            <span><strong>Рост производительности</strong> — увеличение эффективности линий > 20%</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><img
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
+                                    alt="check"></div>
+                            <span><strong>Сокращение перерасхода фарша</strong> с 30% до 14% — экономия 8.7 тонн сырья и
+                                3 млн рублей в год на одной линии</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><img
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
+                                    alt="check"></div>
+                            <span><strong>Оптимизация персонала</strong> — сокращение избыточной численности,
+                                перераспределение ресурсов по загрузке линий</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><img
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
+                                    alt="check"></div>
+                            <span><strong>Локально и безопасно</strong> — данные внутри предприятия, работа 24/7 без
+                                интернета, полный контроль доступа</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><img
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
+                                    alt="check"></div>
+                            <span><strong>Интеграция без остановок</strong> — связка с PostgreSQL, 1С, OLAP, Grafana без
+                                простоя производства</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Правая колонка: изображение -->
+                <div class="fade-in">
+                    <div class="software-window shadow-xl" style="max-width: 650px; margin: 0 auto;">
+                        <div class="window-header bg-[#f8f6f2] border-b border-[#e8e5e0] p-3 flex gap-2">
+                            <span class="w-3 h-3 rounded-full bg-red-400"></span>
+                            <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+                            <span class="w-3 h-3 rounded-full bg-green-400"></span>
+                        </div>
+                        <div class="window-content bg-white p-2">
+                            <img src="images/it_cv_screenshot.png" alt="Система компьютерного зрения"
+                                style="width: 100%; height: auto; display: block; border-radius: 4px;"
+                                onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'padding: 100px 20px; text-align: center; color: #999; background: #f5f5f5;\'>Скриншот CV системы<br>(it_cv_screenshot.png)</div>';">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- РАЗДЕЛ 2: OLAP и BI -->
+    <section id="olap" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">OLAP-модели и BI-системы</h2>
+
+            <!-- Статистика -->
+            <div class="grid md:grid-cols-2 gap-6 mb-12 max-w-4xl mx-auto">
+                <div class="card fade-in text-center p-8 shadow-md border-t-0"
+                    style="background: var(--color-bg-secondary); border-radius: 16px;">
+                    <div class="text-sm font-semibold mb-2 uppercase tracking-wider"
+                        style="color: var(--color-accent);">Единая система</div>
+                    <div class="text-xl font-bold leading-tight text-[#1a1a1a]">Производство, закупки, продажи</div>
+                </div>
+                <div class="card fade-in text-center p-8 shadow-md border-t-0"
+                    style="background: var(--color-bg-secondary); border-radius: 16px;">
+                    <div class="text-sm font-semibold mb-2 uppercase tracking-wider" style="color: var(--color-sage);">
+                        Экономия</div>
+                    <div class="text-xl font-bold leading-tight text-[#1a1a1a]">Аналитика без BI-платформ за миллионы
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Левая колонка: список -->
+                <div class="fade-in">
+                    <ul class="check-list space-y-4">
+                        <li>
+                            <div class="check-icon"><img
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
+                                    alt="check"></div>
+                            <span><strong>Многомерный анализ</strong> — срезы данных по любым параметрам без обращения к
+                                ИТ-специалистам</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><img
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
+                                    alt="check"></div>
+                            <span><strong>Интеграция источников</strong> — автоматический сбор из компьютерного зрения,
+                                SCADA, 1С, производственных систем в единое хранилище</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><img
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
+                                    alt="check"></div>
+                            <span><strong>Скорость внедрения</strong> — развёртывание базовой аналитики за 3-5 недель
+                                против 6-12 месяцев корпоративных BI-систем</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><img
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
+                                    alt="check"></div>
+                            <span><strong>Экономия на лицензиях</strong> — open-source стек (PostgreSQL, Grafana,
+                                ClickHouse) вместо PowerBI/Tableau/QlikSense, экономия от 2 млн руб/год</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><img
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
+                                    alt="check"></div>
+                            <span><strong>Реальное время</strong> — обновление дашбордов каждые 5-30 секунд, мгновенная
+                                реакция на отклонения производственных показателей</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><img
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
+                                    alt="check"></div>
+                            <span><strong>Гибкость дашбордов</strong> — от сводных KPI руководства до детализации по
+                                конкретной партии, настройка новых метрик за минуты</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Правая колонка: изображение -->
+                <div class="fade-in">
+                    <div class="software-window shadow-xl" style="max-width: 650px; margin: 0 auto;">
+                        <div class="window-header bg-[#f8f6f2] border-b border-[#e8e5e0] p-3 flex gap-2">
+                            <span class="w-3 h-3 rounded-full bg-red-400"></span>
+                            <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+                            <span class="w-3 h-3 rounded-full bg-green-400"></span>
+                        </div>
+                        <div class="window-content bg-white p-2">
+                            <img src="images/it_dashboard.png" alt="BI Дашборд"
+                                style="width: 100%; height: auto; display: block; border-radius: 4px;"
+                                onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'padding: 100px 20px; text-align: center; color: #999; background: #f5f5f5;\'>Скриншот Дашборда<br>(it_dashboard.png)</div>';">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- РАЗДЕЛ 3: Отчеты -->
+    <section id="reports" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title fade-in">Интерактивные отчёты и уведомления</h2>
+
+            <!-- Статистика -->
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <div class="card fade-in text-center p-8 shadow-md border-t-0"
+                    style="background: var(--color-bg-secondary); border-radius: 16px;">
+                    <div class="text-sm font-semibold mb-2 uppercase tracking-wider"
+                        style="color: var(--color-accent);">Всё в одном месте</div>
+                    <div class="text-lg font-bold leading-tight text-[#1a1a1a]">Производство, склад, продажи — все
+                        отчёты</div>
+                </div>
+                <div class="card fade-in text-center p-8 shadow-md border-t-0"
+                    style="background: var(--color-bg-secondary); border-radius: 16px;">
+                    <div class="text-sm font-semibold mb-2 uppercase tracking-wider" style="color: var(--color-sage);">
+                        Скорость</div>
+                    <div class="text-lg font-bold leading-tight text-[#1a1a1a]">Мгновенные уведомления о сбоях</div>
+                </div>
+                <div class="card fade-in text-center p-8 shadow-md border-t-0"
+                    style="background: var(--color-bg-secondary); border-radius: 16px;">
+                    <div class="text-sm font-semibold mb-2 uppercase tracking-wider"
+                        style="color: var(--color-accent);">Безопасность</div>
+                    <div class="text-lg font-bold leading-tight text-[#1a1a1a]">Разграничение прав доступа</div>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Левая колонка: список -->
+                <div class="fade-in">
+                    <ul class="check-list space-y-4">
+                        <li>
+                            <div class="check-icon"><img
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
+                                    alt="check"></div>
+                            <span><strong>Автоматические рассылки</strong> — отчёты формируются и отправляются
+                                автоматически, экономия 2-4 часов в день на подготовку Excel-сводок</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><img
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
+                                    alt="check"></div>
+                            <span><strong>Критические алерты</strong> — уведомления о простоях, авариях, отклонениях
+                                параметров приходят за 5-15 секунд, вместо цепочки звонков и пересылки сообщений</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><img
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
+                                    alt="check"></div>
+                            <span><strong>Интерактивные запросы</strong> — любой срез данных по команде боту за 10-30
+                                секунд, без ожидания IT-отдела или аналитиков</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><img
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
+                                    alt="check"></div>
+                            <span><strong>Сокращение коммуникации</strong> — снижение email-рассылок на 70-80%,
+                                информация доходит сразу до ответственных</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><img
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
+                                    alt="check"></div>
+                            <span><strong>Без дополнительного ПО</strong> — не нужны VPN, корпоративные приложения,
+                                личные кабинеты, работает на любом устройстве с Telegram</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><img
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
+                                    alt="check"></div>
+                            <span><strong>Централизованное управление</strong> — администраторы контролируют доступ к
+                                каждому боту и отчёту, добавление/удаление пользователей за 1 минуту</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Правая колонка: изображение -->
+                <div class="fade-in">
+                    <div class="image-frame shadow-xl" style="max-width: 550px; margin: 0 auto; display: block;">
+                        <img src="images/it_telegram.png" alt="Telegram бот" class="w-full rounded-lg"
+                            style="display: block;"
+                            onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'padding: 100px 20px; text-align: center; color: #999; background: #fff;\'>Скриншот Telegram<br>(it_telegram.png)</div>';">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- РАЗДЕЛ 4: Качество -->
+    <section id="quality" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Контроль качества end-to-end</h2>
+
+            <!-- Статистика -->
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <div class="card fade-in text-center p-8 shadow-md border-t-0"
+                    style="background: var(--color-bg-secondary); border-radius: 16px;">
+                    <div class="text-sm font-semibold mb-2 uppercase tracking-wider"
+                        style="color: var(--color-accent);">Сквозной контроль</div>
+                    <div class="text-lg font-bold leading-tight text-[#1a1a1a]">От фарша до полки</div>
+                </div>
+                <div class="card fade-in text-center p-8 shadow-md border-t-0"
+                    style="background: var(--color-bg-secondary); border-radius: 16px;">
+                    <div class="text-sm font-semibold mb-2 uppercase tracking-wider" style="color: var(--color-sage);">
+                        Собственная система</div>
+                    <div class="text-lg font-bold leading-tight text-[#1a1a1a]">Экономия от 3 млн руб/год</div>
+                </div>
+                <div class="card fade-in text-center p-8 shadow-md border-t-0"
+                    style="background: var(--color-bg-secondary); border-radius: 16px;">
+                    <div class="text-sm font-semibold mb-2 uppercase tracking-wider"
+                        style="color: var(--color-accent);">AI-ассистент</div>
+                    <div class="text-lg font-bold leading-tight text-[#1a1a1a]">Анализ отзывов и выявление дефектов
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Левая колонка: список -->
+                <div class="fade-in">
+                    <ul class="check-list space-y-4">
+                        <li>
+                            <div class="check-icon"><img
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
+                                    alt="check"></div>
+                            <span><strong>Замкнутый цикл качества</strong> — фиксация дефектов от куттера до
+                                полки</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><img
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
+                                    alt="check"></div>
+                            <span><strong>Быстрая валидация продукта</strong> — тестирование нового SKU или рецептуры на
+                                реальных потребителях за 24-48 часов, результаты с детализацией по возрасту, полу и
+                                предпочтениям</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><img
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
+                                    alt="check"></div>
+                            <span><strong>Контроль изменений</strong> — сравнение органолептических оценок до/после
+                                корректировки рецептуры, выявление влияния каждого параметра на восприятие</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><img
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
+                                    alt="check"></div>
+                            <span><strong>Оперативная реакция</strong> — критические отклонения качества доходят до
+                                технологов и руководства за 30-60 секунд с возможностью постановки и контроля выполнения
+                                задач прямо из уведомлений</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><img
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
+                                    alt="check"></div>
+                            <span><strong>История дефектов</strong> — накопление базы проблем с динамикой по времени,
+                                выявление повторяющихся паттернов и сезонности</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><img
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5704d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"
+                                    alt="check"></div>
+                            <span><strong>Сквозная аналитика</strong> — масштабирование от общей картины по цеху до
+                                конкретного СКЮ</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Правая колонка: изображение -->
+                <div class="fade-in">
+                    <div class="image-frame shadow-xl" style="max-width: 400px; margin: 0 auto; display: block;">
+                        <img src="images/it_quality_bot.png" alt="Бот качества" class="w-full rounded-lg"
+                            style="display: block;"
+                            onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'padding: 100px 20px; text-align: center; color: #999; background: #fff;\'>Скриншот Бота<br>(it_quality_bot.png)</div>';">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section-alt cta-section">
+        <div class="container">
+            <div class="max-w-3xl mx-auto text-center fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Готовы обсудить IT-решения?</h2>
+                <p style="color: var(--color-text-secondary);" class="mb-8 text-lg">Расскажите о ваших задачах — мы
+                    предложим оптимальное решение</p>
+                <a href="contacts.html" class="btn-primary">Связаться с нами →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="images/logo.png" alt="Smart Solutions" class="h-10 w-auto">
+                        <span class="font-bold text-lg text-white">Smart Solutions</span>
+                    </div>
+                    <p class="text-sm max-w-md" style="color: #9c9690;">Увеличиваем прибыль компаний через маркетинг, IT
+                        и эффективность производства.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Навигация</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="marketing.html">Маркетинг</a></li>
+                        <li><a href="it.html">IT</a></li>
+                        <li><a href="optimization.html">Оптимизация</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Контакты</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="mailto:info@smartsolutions.ru">info@smartsolutions.ru</a></li>
+                        <li><a href="tel:+7XXXXXXXXXX">+7 (XXX) XXX-XX-XX</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center text-sm" style="color: #6b6660;">
+                <p>© 2025 Smart Solutions. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

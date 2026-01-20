@@ -1,0 +1,110 @@
+/* ===================================== */
+/* Навигационные карточки (Marketing, IT, etc.) */
+/* ===================================== */
+
+.nav-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background: var(--color-bg-card);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition);
+    border: 1px solid transparent;
+    text-decoration: none;
+    height: 100%;
+}
+
+.nav-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-accent-light);
+}
+
+.nav-card-icon {
+    width: 96px;
+    height: 96px;
+    margin-bottom: 1.5rem;
+    background: var(--color-accent-light);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(181, 112, 77, 0.2);
+    transition: all var(--transition);
+}
+
+.nav-card:hover .nav-card-icon {
+    background: white;
+    box-shadow: var(--shadow-sm);
+    transform: scale(1.05);
+}
+
+.nav-card-icon img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    opacity: 0.9;
+    transition: opacity var(--transition);
+}
+
+.nav-card:hover .nav-card-icon img {
+    opacity: 1;
+}
+
+.nav-card-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--color-text-primary);
+    transition: color var(--transition);
+}
+
+.nav-card:hover .nav-card-title {
+    color: var(--color-accent);
+}
+
+/* ===================================== */
+/* Утилиты (Tailwind-like)               */
+/* ===================================== */
+
+.pt-8 {
+    padding-top: 2rem;
+}
+
+.pb-12 {
+    padding-bottom: 3rem;
+}
+
+.h-10 {
+    height: 40px;
+}
+
+.w-auto {
+    width: auto;
+}
+
+.section-alt {
+    background-color: var(--color-bg-primary);
+    position: relative;
+}
+
+.section-alt::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 10%, rgba(0, 0, 0, 0.02) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+/* Глобальный фикс для логотипа */
+.header .logo img {
+    max-height: 40px;
+    width: auto;
+    display: block;
+}

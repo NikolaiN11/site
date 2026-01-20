@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Клиенты Smart Solutions">
+    <title>Клиенты — Smart Solutions</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💡</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="images/logo.png" alt="Smart Solutions" class="h-10 w-auto">
+                    <span class="font-bold text-lg">Smart Solutions</span>
+                </a>
+                <div class="desktop-nav hidden md:flex items-center gap-1">
+                    <a href="index.html" class="nav-link">Главная</a>
+                    <a href="services.html" class="nav-link">Услуги</a>
+                    <a href="cases.html" class="nav-link">Кейсы</a>
+                    <a href="clients.html" class="nav-link active">Клиенты</a>
+                    <a href="about.html" class="nav-link">О нас</a>
+                    <a href="contacts.html" class="btn-primary ml-4">Связаться</a>
+                </div>
+                <button class="mobile-menu-btn flex md:hidden flex-col gap-1.5 p-2"
+                    aria-label="Меню"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-menu">
+        <a href="index.html" class="nav-link text-xl">Главная</a>
+        <a href="services.html" class="nav-link text-xl">Услуги</a>
+        <a href="cases.html" class="nav-link text-xl">Кейсы</a>
+        <a href="clients.html" class="nav-link text-xl">Клиенты</a>
+        <a href="about.html" class="nav-link text-xl">О нас</a>
+        <a href="contacts.html" class="btn-primary mt-4">Связаться</a>
+    </div>
+
+    <section class="pt-32 pb-16">
+        <div class="container">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-center">Наши клиенты</h1>
+            <p class="text-xl text-center max-w-2xl mx-auto" style="color: var(--color-text-secondary);">Компании,
+                которые доверяют нам</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="card fade-in flex items-center justify-center p-6 h-32">
+                    <img src="images/client1.webp" alt="Логотип клиента"
+                        class="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition-opacity">
+                </div>
+                <div class="card fade-in flex items-center justify-center p-6 h-32">
+                    <img src="images/client2.png" alt="Логотип клиента"
+                        class="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition-opacity">
+                </div>
+                <div class="card fade-in flex items-center justify-center h-32">
+                    <span style="color: var(--color-text-muted);" class="text-sm">Логотип</span>
+                </div>
+                <div class="card fade-in flex items-center justify-center h-32">
+                    <span style="color: var(--color-text-muted);" class="text-sm">Логотип</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title fade-in">Отзывы</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="card fade-in">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold"
+                            style="background: var(--color-accent);">АИ</div>
+                        <div>
+                            <p class="font-semibold">Имя Фамилия</p>
+                            <p class="text-sm" style="color: var(--color-text-muted);">Должность</p>
+                        </div>
+                    </div>
+                    <p class="text-sm italic" style="color: var(--color-text-secondary);">«Отзыв будет добавлен позже.»
+                    </p>
+                </div>
+                <div class="card fade-in">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold"
+                            style="background: var(--color-sage);">БВ</div>
+                        <div>
+                            <p class="font-semibold">Имя Фамилия</p>
+                            <p class="text-sm" style="color: var(--color-text-muted);">Должность</p>
+                        </div>
+                    </div>
+                    <p class="text-sm italic" style="color: var(--color-text-secondary);">«Отзыв будет добавлен позже.»
+                    </p>
+                </div>
+                <div class="card fade-in">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold"
+                            style="background: var(--color-accent);">ГД</div>
+                        <div>
+                            <p class="font-semibold">Имя Фамилия</p>
+                            <p class="text-sm" style="color: var(--color-text-muted);">Должность</p>
+                        </div>
+                    </div>
+                    <p class="text-sm italic" style="color: var(--color-text-secondary);">«Отзыв будет добавлен позже.»
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div class="fade-in">
+                    <p class="text-4xl font-extrabold mb-2 gradient-text">XX+</p>
+                    <p style="color: var(--color-text-secondary);">Проектов</p>
+                </div>
+                <div class="fade-in">
+                    <p class="text-4xl font-extrabold mb-2 gradient-text">XX+</p>
+                    <p style="color: var(--color-text-secondary);">Клиентов</p>
+                </div>
+                <div class="fade-in">
+                    <p class="text-4xl font-extrabold mb-2 gradient-text">X лет</p>
+                    <p style="color: var(--color-text-secondary);">На рынке</p>
+                </div>
+                <div class="fade-in">
+                    <p class="text-4xl font-extrabold mb-2 gradient-text">XX%</p>
+                    <p style="color: var(--color-text-secondary);">Возвращаются</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <div class="max-w-3xl mx-auto text-center fade-in">
+                <h2 class="text-3xl font-bold mb-4">Станьте клиентом</h2>
+                <p class="mb-8" style="color: var(--color-text-secondary);">Присоединяйтесь к нам</p>
+                <a href="contacts.html" class="btn-primary">Связаться →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="images/logo.png" alt="Smart Solutions" class="h-10 w-auto">
+                        <span class="font-bold text-lg text-white">Smart Solutions</span>
+                    </div>
+                    <p class="text-sm" style="color: #9c9690;">IT-решения для промышленности.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Навигация</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="cases.html">Кейсы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Контакты</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="mailto:info@smartsolutions.ru">info@smartsolutions.ru</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center text-sm" style="color: #6b6660;">
+                <p>© 2025 Smart Solutions</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

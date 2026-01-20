@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Smart Solutions — Оптимизация производства: аудит процессов, повышение эффективности, консалтинг">
+    <title>Оптимизация производства — Smart Solutions</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💡</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- НАВИГАЦИЯ -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="images/logo.png" alt="Smart Solutions" class="h-10 w-auto">
+                    <span class="font-bold text-lg">Smart Solutions</span>
+                </a>
+                <div class="desktop-nav hidden md:flex items-center gap-1">
+                    <a href="marketing.html" class="nav-link">Маркетинг</a>
+                    <a href="it.html" class="nav-link">IT</a>
+                    <a href="optimization.html" class="nav-link active">Оптимизация производства</a>
+                    <a href="about.html" class="nav-link">О нас</a>
+                    <a href="contacts.html" class="btn-primary ml-4">Контакты</a>
+                </div>
+                <button class="mobile-menu-btn flex md:hidden flex-col gap-1.5 p-2" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <a href="marketing.html" class="nav-link text-xl">Маркетинг</a>
+        <a href="it.html" class="nav-link text-xl">IT</a>
+        <a href="optimization.html" class="nav-link text-xl">Оптимизация производства</a>
+        <a href="about.html" class="nav-link text-xl">О нас</a>
+        <a href="contacts.html" class="btn-primary mt-4">Контакты</a>
+    </div>
+
+    <!-- HERO Оптимизация -->
+    <section class="hero relative overflow-hidden" style="min-height: auto; padding: 6rem 0 4rem;">
+        <div class="container relative z-10">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-6 text-center fade-in">
+                <span class="gradient-text">Оптимизация производства</span>
+            </h1>
+            <p class="text-lg text-center max-w-3xl mx-auto fade-in" style="color: var(--color-text-secondary);">
+                Аудит процессов, повышение эффективности и консалтинг для FMCG-производств
+            </p>
+        </div>
+    </section>
+
+    <!-- Placeholder для контента -->
+    <section class="section">
+        <div class="container">
+            <div class="max-w-3xl mx-auto text-center fade-in">
+                <div class="card p-12">
+                    <div class="text-6xl mb-6">🚧</div>
+                    <h2 class="text-2xl font-bold mb-4">Раздел в разработке</h2>
+                    <p style="color: var(--color-text-secondary);" class="mb-8">
+                        Содержимое этого раздела скоро появится. Пока вы можете ознакомиться с другими разделами или
+                        связаться с нами.
+                    </p>
+                    <div class="flex flex-wrap gap-4 justify-center">
+                        <a href="marketing.html" class="btn-secondary">Маркетинг</a>
+                        <a href="contacts.html" class="btn-primary">Связаться с нами</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="images/logo.png" alt="Smart Solutions" class="h-10 w-auto">
+                        <span class="font-bold text-lg text-white">Smart Solutions</span>
+                    </div>
+                    <p class="text-sm max-w-md" style="color: #9c9690;">Увеличиваем прибыль компаний через маркетинг, IT
+                        и эффективность производства.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Навигация</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="marketing.html">Маркетинг</a></li>
+                        <li><a href="it.html">IT</a></li>
+                        <li><a href="optimization.html">Оптимизация</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Контакты</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="mailto:info@smartsolutions.ru">info@smartsolutions.ru</a></li>
+                        <li><a href="tel:+7XXXXXXXXXX">+7 (XXX) XXX-XX-XX</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center text-sm" style="color: #6b6660;">
+                <p>© 2025 Smart Solutions. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

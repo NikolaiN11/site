@@ -1,0 +1,128 @@
+/**
+ * Smart Solutions — Main JavaScript
+ * Интерактивность и компоненты
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+    initNavbar();
+    initMobileMenu();
+    initFadeAnimations();
+    initSmoothScroll();
+});
+
+/**
+ * Навигация — эффект при скролле
+ */
+function initNavbar() {
+    const navbar = document.querySelector('.navbar');
+    if (!navbar) return;
+
+    const handleScroll = () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Проверить при загрузке
+}
+
+/**
+ * Мобильное меню
+ */
+function initMobileMenu() {
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const menuLinks = document.querySelectorAll('.mobile-menu a');
+
+    if (!menuBtn || !mobileMenu) return;
+
+    const toggleMenu = () => {
+        mobileMenu.classList.toggle('active');
+        menuBtn.setAttribute('aria-expanded', mobileMenu.classList.contains('active'));
+
+        // Блокировка скролла при открытом меню
+        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    };
+
+    menuBtn.addEventListener('click', toggleMenu);
+
+    // Закрытие по клику на ссылку
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            menuBtn.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        });
+    });
+
+    // Закрытие по Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+            toggleMenu();
+        }
+    });
+}
+
+/**
+ * Анимации появления при скролле
+ */
+function initFadeAnimations() {
+    const fadeElements = document.querySelectorAll('.fade-in');
+    if (fadeElements.length === 0) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Анимация только один раз
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    fadeElements.forEach(el => observer.observe(el));
+}
+
+/**
+ * Плавный скролл к якорям
+ */
+function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === '#') return;
+
+            const target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+}
+
+/**
+ * Утилита: подсветка активной страницы в навигации
+ */
+function highlightActiveNavLink() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+            link.classList.add('active');
+        }
+    });
+}
+
+// Вызываем после загрузки
+document.addEventListener('DOMContentLoaded', highlightActiveNavLink);

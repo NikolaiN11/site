@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Контакты Smart Solutions">
+    <title>Контакты — Smart Solutions</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💡</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="images/logo.png" alt="Smart Solutions" class="h-10 w-auto">
+                    <span class="font-bold text-lg">Smart Solutions</span>
+                </a>
+                <div class="desktop-nav hidden md:flex items-center gap-1">
+                    <a href="index.html" class="nav-link">Главная</a>
+                    <a href="services.html" class="nav-link">Услуги</a>
+                    <a href="cases.html" class="nav-link">Кейсы</a>
+                    <a href="clients.html" class="nav-link">Клиенты</a>
+                    <a href="about.html" class="nav-link">О нас</a>
+                    <a href="contacts.html" class="btn-primary ml-4">Связаться</a>
+                </div>
+                <button class="mobile-menu-btn flex md:hidden flex-col gap-1.5 p-2"
+                    aria-label="Меню"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-menu">
+        <a href="index.html" class="nav-link text-xl">Главная</a>
+        <a href="services.html" class="nav-link text-xl">Услуги</a>
+        <a href="cases.html" class="nav-link text-xl">Кейсы</a>
+        <a href="clients.html" class="nav-link text-xl">Клиенты</a>
+        <a href="about.html" class="nav-link text-xl">О нас</a>
+        <a href="contacts.html" class="btn-primary mt-4">Связаться</a>
+    </div>
+
+    <section class="pt-32 pb-16">
+        <div class="container">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-center">Контакты</h1>
+            <p class="text-xl text-center max-w-2xl mx-auto" style="color: var(--color-text-secondary);">Свяжитесь с
+                нами</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="fade-in">
+                    <h2 class="text-2xl font-bold mb-6">Свяжитесь с нами</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0"
+                                style="background: var(--color-accent-light); color: var(--color-accent);">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold mb-1">Email</p><a
+                                    href="mailto:info@smartsolutions.ru">info@smartsolutions.ru</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0"
+                                style="background: var(--color-accent-light); color: var(--color-accent);">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold mb-1">Телефон</p><a href="tel:+7XXXXXXXXXX">+7 (XXX)
+                                    XXX-XX-XX</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0"
+                                style="background: var(--color-accent-light); color: var(--color-accent);">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold mb-1">Telegram</p><a href="https://t.me/smartsolutions"
+                                    target="_blank">@smartsolutions</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0"
+                                style="background: var(--color-accent-light); color: var(--color-accent);">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold mb-1">Адрес</p>
+                                <p style="color: var(--color-text-secondary);">Город, ул. Улица, д. XX</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <div class="card p-8">
+                        <h2 class="text-2xl font-bold mb-6">Оставить заявку</h2>
+                        <form id="contact-form" class="space-y-4">
+                            <div><label for="name" class="block text-sm font-medium mb-2">Имя *</label><input
+                                    type="text" id="name" name="name" required
+                                    class="w-full px-4 py-3 border rounded-lg transition"
+                                    style="border-color: var(--color-border); background: var(--color-bg-secondary);"
+                                    placeholder="Ваше имя"></div>
+                            <div><label for="email" class="block text-sm font-medium mb-2">Email *</label><input
+                                    type="email" id="email" name="email" required
+                                    class="w-full px-4 py-3 border rounded-lg transition"
+                                    style="border-color: var(--color-border); background: var(--color-bg-secondary);"
+                                    placeholder="email@example.com"></div>
+                            <div><label for="phone" class="block text-sm font-medium mb-2">Телефон</label><input
+                                    type="tel" id="phone" name="phone"
+                                    class="w-full px-4 py-3 border rounded-lg transition"
+                                    style="border-color: var(--color-border); background: var(--color-bg-secondary);"
+                                    placeholder="+7 (XXX) XXX-XX-XX"></div>
+                            <div><label for="message" class="block text-sm font-medium mb-2">Сообщение
+                                    *</label><textarea id="message" name="message" rows="4" required
+                                    class="w-full px-4 py-3 border rounded-lg transition resize-none"
+                                    style="border-color: var(--color-border); background: var(--color-bg-secondary);"
+                                    placeholder="Опишите задачу"></textarea></div>
+                            <button type="submit" class="btn-primary w-full">Отправить</button>
+                            <p class="text-xs text-center" style="color: var(--color-text-muted);">Нажимая кнопку, вы
+                                соглашаетесь с обработкой данных</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <div class="rounded-2xl h-80 flex items-center justify-center fade-in"
+                style="background: var(--color-bg-secondary); border: 1px solid var(--color-border);">
+                <span style="color: var(--color-text-muted);">Карта</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="images/logo.png" alt="Smart Solutions" class="h-10 w-auto">
+                        <span class="font-bold text-lg text-white">Smart Solutions</span>
+                    </div>
+                    <p class="text-sm" style="color: #9c9690;">IT-решения для промышленности.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Навигация</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="cases.html">Кейсы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Контакты</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="mailto:info@smartsolutions.ru">info@smartsolutions.ru</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center text-sm" style="color: #6b6660;">
+                <p>© 2025 Smart Solutions</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

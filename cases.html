@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Кейсы Smart Solutions — примеры реализованных проектов">
+    <title>Кейсы — Smart Solutions</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💡</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- НАВИГАЦИЯ -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="images/logo.png" alt="Smart Solutions" class="h-10 w-auto">
+                    <span class="font-bold text-lg">Smart Solutions</span>
+                </a>
+                <div class="desktop-nav hidden md:flex items-center gap-1">
+                    <a href="index.html" class="nav-link">Главная</a>
+                    <a href="services.html" class="nav-link">Услуги</a>
+                    <a href="cases.html" class="nav-link active">Кейсы</a>
+                    <a href="clients.html" class="nav-link">Клиенты</a>
+                    <a href="about.html" class="nav-link">О нас</a>
+                    <a href="contacts.html" class="btn-primary ml-4">Связаться</a>
+                </div>
+                <button class="mobile-menu-btn flex md:hidden flex-col gap-1.5 p-2" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <a href="index.html" class="nav-link text-xl">Главная</a>
+        <a href="services.html" class="nav-link text-xl">Услуги</a>
+        <a href="cases.html" class="nav-link text-xl">Кейсы</a>
+        <a href="clients.html" class="nav-link text-xl">Клиенты</a>
+        <a href="about.html" class="nav-link text-xl">О нас</a>
+        <a href="contacts.html" class="btn-primary mt-4">Связаться</a>
+    </div>
+
+    <!-- HEADER -->
+    <section class="pt-32 pb-16">
+        <div class="container">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-center fade-in">Наши кейсы</h1>
+            <p class="text-xl text-center max-w-2xl mx-auto fade-in" style="color: var(--color-text-secondary);">
+                Примеры реализованных проектов и достигнутых результатов
+            </p>
+        </div>
+    </section>
+
+    <!-- КЕЙСЫ -->
+    <section class="section">
+        <div class="container">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Кейс 1: КЗ -->
+                <article class="card fade-in group">
+                    <div class="image-frame h-48 mb-6">
+                        <img src="images/yolo.png" alt="Мониторинг YOLO"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="flex gap-2 mb-3">
+                        <span class="badge text-xs">
+                            <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg>
+                            Компьютерное зрение
+                        </span>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">Мониторинг производственных циклов</h3>
+                    <p class="text-sm mb-6" style="color: var(--color-text-secondary);">
+                        Система на базе YOLO v11 для автоматической фиксации времени циклов и активности персонала на
+                        производственной линии.
+                    </p>
+                    <div class="flex items-center gap-4 text-sm font-bold">
+                        <span class="text-gradient">↑ 97% точность</span>
+                        <span style="color: var(--color-text-muted);">⏱️ 3 месяца</span>
+                    </div>
+                </article>
+
+                <!-- Кейс 2: BI -->
+                <article class="card fade-in group">
+                    <div class="software-window h-48 mb-6">
+                        <div class="window-header">
+                            <div class="window-dot"></div>
+                            <div class="window-dot"></div>
+                            <div class="window-dot"></div>
+                        </div>
+                        <img src="images/olap.png" alt="OLAP Аналитика" class="w-full h-auto">
+                    </div>
+                    <div class="flex gap-2 mb-3">
+                        <span class="badge text-xs">
+                            <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />
+                                <path d="M22 12A10 10 0 0 0 12 2v10z" />
+                            </svg>
+                            BI-аналитика
+                        </span>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">Внедрение OLAP-аналитики</h3>
+                    <p class="text-sm mb-6" style="color: var(--color-text-secondary);">
+                        Разработка системы многомерного анализа данных для крупного агрохолдинга. Замена ручных отчетов
+                        в Excel на мгновенные срезы.
+                    </p>
+                    <div class="flex items-center gap-4 text-sm font-bold">
+                        <span class="text-gradient">↑ +25% эфф-ть</span>
+                        <span style="color: var(--color-text-muted);">⏱️ 4 месяца</span>
+                    </div>
+                </article>
+
+                <!-- Кейс 3: Telegram -->
+                <article class="card fade-in group">
+                    <div class="software-window h-48 mb-6">
+                        <div class="window-header">
+                            <div class="window-dot"></div>
+                            <div class="window-dot"></div>
+                            <div class="window-dot"></div>
+                        </div>
+                        <img src="images/Telegram.png" alt="Telegram Бот" class="w-full h-auto">
+                    </div>
+                    <div class="flex gap-2 mb-3">
+                        <span class="badge text-xs">
+                            <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                            </svg>
+                            Telegram
+                        </span>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">Инфраструктура алертинга</h3>
+                    <p class="text-sm mb-6" style="color: var(--color-text-secondary);">
+                        Создание системы мгновенных уведомлений в Telegram о критических сбоях и простох на линии в
+                        режиме реального времени.
+                    </p>
+                    <div class="flex items-center gap-4 text-sm font-bold">
+                        <span class="text-gradient">↓ -60% реакция</span>
+                        <span style="color: var(--color-text-muted);">⏱️ 2 месяца</span>
+                    </div>
+                </article>
+
+                <!-- Кейс 4: QC -->
+                <article class="card fade-in group">
+                    <div class="icon-placeholder h-48 mb-6">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                    </div>
+                    <div class="flex gap-2 mb-3">
+                        <span class="badge text-xs">
+                            <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                <polyline points="22 4 12 14.01 9 11.01" />
+                            </svg>
+                            Контроль качества
+                        </span>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">Цифровой журнал качества</h3>
+                    <p class="text-sm mb-6" style="color: var(--color-text-secondary);">
+                        Перевод бумажного документооборота службы QC в электронный вид с автоматической трассировкой
+                        каждой партии продукции.
+                    </p>
+                    <div class="flex items-center gap-4 text-sm font-bold">
+                        <span class="text-gradient">100% контроль</span>
+                        <span style="color: var(--color-text-muted);">⏱️ 3 месяца</span>
+                    </div>
+                </article>
+
+                <!-- Кейс 5: Маркетинг -->
+                <article class="card fade-in group">
+                    <div class="image-frame h-48 mb-6">
+                        <img src="images/Focus_gruppa.png" alt="Фокус-группа"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="flex gap-2 mb-3">
+                        <span class="badge text-xs">
+                            <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <circle cx="12" cy="12" r="6" />
+                                <circle cx="12" cy="12" r="2" />
+                            </svg>
+                            Маркетинг
+                        </span>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">Исследование для бренда</h3>
+                    <p class="text-sm mb-6" style="color: var(--color-text-secondary);">
+                        Проведение глубинных интервью и 12 фокус-групп для разработки стратегии запуска новой линейки
+                        мясных продуктов.
+                    </p>
+                    <div class="flex items-center gap-4 text-sm font-bold">
+                        <span class="text-gradient">📈 12 групп</span>
+                        <span style="color: var(--color-text-muted);">⏱️ 2 месяца</span>
+                    </div>
+                </article>
+
+                <!-- Кейс 6: Консалтинг -->
+                <article class="card fade-in group">
+                    <div class="software-window h-48 mb-6">
+                        <div class="window-header">
+                            <div class="window-dot"></div>
+                            <div class="window-dot"></div>
+                            <div class="window-dot"></div>
+                        </div>
+                        <img src="images/BI.png" alt="Dashboard" class="w-full h-auto">
+                    </div>
+                    <div class="flex gap-2 mb-3">
+                        <span class="badge text-xs">
+                            <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3" />
+                                <path
+                                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                            </svg>
+                            Консалтинг
+                        </span>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">Оптимизация производства</h3>
+                    <p class="text-sm mb-6" style="color: var(--color-text-secondary);">
+                        Комплексный аудит и внедрение системы ключевых показателей эффективности (KPI) для повышения
+                        общей производительности.
+                    </p>
+                    <div class="flex items-center gap-4 text-sm font-bold">
+                        <span class="text-gradient">↑ +18% производит.</span>
+                        <span style="color: var(--color-text-muted);">⏱️ 5 месяцев</span>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section-alt cta-section">
+        <div class="container">
+            <div class="max-w-3xl mx-auto text-center fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Хотите такой же результат?</h2>
+                <p class="mb-8 text-lg" style="color: var(--color-text-secondary);">Расскажите о вашем проекте —
+                    обсудим, как мы можем помочь</p>
+                <a href="contacts.html" class="btn-primary">Обсудить проект →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="images/logo.png" alt="Smart Solutions" class="h-10 w-auto">
+                        <span class="font-bold text-lg text-white">Smart Solutions</span>
+                    </div>
+                    <p class="text-sm max-w-md" style="color: #a0a0a0;">IT-решения и консалтинг для мясоперерабатывающей
+                        промышленности.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Навигация</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="cases.html">Кейсы</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Контакты</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="mailto:info@smartsolutions.ru">info@smartsolutions.ru</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center text-sm" style="color: #6b6660;">
+                <p>© 2025 Smart Solutions. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

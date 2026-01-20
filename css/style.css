@@ -1,0 +1,1185 @@
+/* ===================================== */
+/* Smart Solutions — Premium Light Theme */
+/* Современный и стильный дизайн         */
+/* ===================================== */
+
+:root {
+    /* Фоны */
+    --color-bg-primary: #faf9f7;
+    --color-bg-secondary: #f5f3f0;
+    --color-bg-card: #ffffff;
+    --color-bg-elevated: rgba(255, 255, 255, 0.85);
+
+    /* Текст */
+    --color-text-primary: #1a1a1a;
+    --color-text-secondary: #5c5c5c;
+    --color-text-muted: #8a8a8a;
+
+    /* Акценты — насыщенный терракот + sage */
+    --color-accent: #b5704d;
+    --color-accent-hover: #9c5f40;
+    --color-accent-light: rgba(181, 112, 77, 0.12);
+    --color-accent-glow: rgba(181, 112, 77, 0.25);
+
+    --color-sage: #5a7a5a;
+    --color-sage-light: rgba(90, 122, 90, 0.12);
+
+    /* Градиенты */
+    --gradient-accent: linear-gradient(135deg, #b5704d 0%, #d4a574 50%, #5a7a5a 100%);
+    --gradient-subtle: linear-gradient(135deg, rgba(181, 112, 77, 0.08) 0%, rgba(90, 122, 90, 0.06) 100%);
+    --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+
+    /* Границы */
+    --color-border: rgba(0, 0, 0, 0.06);
+    --color-border-hover: rgba(181, 112, 77, 0.3);
+
+    /* Тени — многослойные и мягкие */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.04);
+    --shadow-glow: 0 0 40px rgba(181, 112, 77, 0.15);
+
+    /* Размытие */
+    --blur-sm: 8px;
+    --blur-md: 16px;
+    --blur-lg: 24px;
+
+    /* Радиусы */
+    --radius-sm: 12px;
+    --radius-md: 20px;
+    --radius-lg: 28px;
+    --radius-xl: 36px;
+
+    /* Переходы */
+    --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Reset & Base --- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Декоративные блобы — анимированные */
+body::before {
+    content: '';
+    position: fixed;
+    top: -15%;
+    right: -8%;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(181, 112, 77, 0.15) 0%, transparent 60%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+    animation: blob-morph 25s ease-in-out infinite;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    bottom: -10%;
+    left: -12%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(90, 122, 90, 0.12) 0%, transparent 60%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+    animation: blob-morph 30s ease-in-out infinite reverse;
+}
+
+@keyframes blob-morph {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+        border-radius: 50%;
+    }
+
+    25% {
+        transform: translate(40px, -30px) scale(1.08) rotate(5deg);
+        border-radius: 45% 55% 60% 40%;
+    }
+
+    50% {
+        transform: translate(-20px, 40px) scale(0.95) rotate(-3deg);
+        border-radius: 55% 45% 40% 60%;
+    }
+
+    75% {
+        transform: translate(30px, 20px) scale(1.03) rotate(2deg);
+        border-radius: 48% 52% 55% 45%;
+    }
+}
+
+/* --- Container --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* --- Typography --- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.2;
+    font-weight: 800;
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--color-accent-hover);
+}
+
+/* Градиентный текст - улучшенный */
+.gradient-text {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 200% auto;
+    animation: gradient-shift 8s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* ===================================== */
+/* НАВИГАЦИЯ — Glassmorphism             */
+/* ===================================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(250, 249, 247, 0.85);
+    backdrop-filter: blur(var(--blur-md));
+    -webkit-backdrop-filter: blur(var(--blur-md));
+    border-bottom: 1px solid var(--color-border);
+    transition: all var(--transition);
+}
+
+.navbar.scrolled {
+    box-shadow: var(--shadow-md);
+    background: rgba(250, 249, 247, 0.95);
+}
+
+.nav-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 18px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    transition: all var(--transition-fast);
+    border-radius: var(--radius-sm);
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 20px;
+    height: 2px;
+    background: var(--color-accent);
+    border-radius: 1px;
+    transition: transform var(--transition-fast);
+}
+
+.nav-link:hover {
+    color: var(--color-text-primary);
+}
+
+.nav-link:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.nav-link.active {
+    color: var(--color-accent);
+    background: var(--color-accent-light);
+}
+
+.nav-link.active::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* Мобильное меню */
+.mobile-menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: var(--radius-sm);
+    transition: background var(--transition-fast);
+}
+
+.mobile-menu-btn:hover {
+    background: var(--color-accent-light);
+}
+
+.mobile-menu-btn span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--color-text-primary);
+    border-radius: 2px;
+    transition: var(--transition-fast);
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(250, 249, 247, 0.98);
+    backdrop-filter: blur(var(--blur-lg));
+    padding: 32px 24px;
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 999;
+}
+
+.mobile-menu.active {
+    display: flex;
+}
+
+/* ===================================== */
+/* КНОПКИ — Современные с эффектами      */
+/* ===================================== */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 32px;
+    background: var(--color-accent);
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+}
+
+.btn-primary:hover {
+    background: var(--color-accent-hover);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
+}
+
+.btn-primary:hover::before {
+    opacity: 1;
+}
+
+.btn-primary:active {
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 32px;
+    background: transparent;
+    color: var(--color-text-primary);
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: var(--radius-md);
+    border: 2px solid var(--color-border);
+    cursor: pointer;
+    transition: all var(--transition);
+    position: relative;
+}
+
+.btn-secondary:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    background: var(--color-accent-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* ===================================== */
+/* HERO СЕКЦИЯ — Улучшенная              */
+/* ===================================== */
+.hero {
+    min-height: 92vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+}
+
+/* Декоративные элементы Hero */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(ellipse 80% 60% at 0% 20%, rgba(181, 112, 77, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse 60% 50% at 100% 80%, rgba(90, 122, 90, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse 50% 40% at 50% 100%, rgba(212, 165, 116, 0.08) 0%, transparent 40%);
+    pointer-events: none;
+}
+
+/* Декоративные кольца */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -150px;
+    width: 450px;
+    height: 450px;
+    border: 1px solid rgba(181, 112, 77, 0.12);
+    border-radius: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    animation: ring-pulse 10s ease-in-out infinite;
+}
+
+@keyframes ring-pulse {
+
+    0%,
+    100% {
+        transform: translateY(-50%) scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translateY(-50%) scale(1.15);
+        opacity: 0.8;
+    }
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Бейдж — улучшенный */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: var(--color-bg-elevated);
+    backdrop-filter: blur(var(--blur-sm));
+    border: 1px solid var(--color-border);
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    box-shadow: var(--shadow-sm);
+}
+
+.badge-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--color-accent);
+    border-radius: 50%;
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 var(--color-accent-glow);
+        transform: scale(1);
+    }
+
+    50% {
+        box-shadow: 0 0 0 8px transparent;
+        transform: scale(1.1);
+    }
+}
+
+/* Hero Logo Container */
+.hero-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: float-gentle 8s ease-in-out infinite;
+}
+
+.hero-logo-container img {
+    filter: drop-shadow(0 25px 40px rgba(181, 112, 77, 0.2));
+    max-width: 100%;
+    height: auto;
+}
+
+@keyframes float-gentle {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-15px) rotate(1deg);
+    }
+
+    75% {
+        transform: translateY(-10px) rotate(-1deg);
+    }
+}
+
+/* ===================================== */
+/* СЕКЦИИ                                */
+/* ===================================== */
+.section {
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Градиентный фон для секций */
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 0% 0%, rgba(181, 112, 77, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 100% 100%, rgba(90, 122, 90, 0.06) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.section>.container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Альтернативная секция */
+.section-alt {
+    background: linear-gradient(180deg,
+            rgba(250, 249, 247, 1) 0%,
+            rgba(245, 240, 235, 0.5) 50%,
+            rgba(250, 249, 247, 1) 100%);
+}
+
+/* Subtle grid pattern */
+.section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.015) 1px, transparent 1px);
+    background-size: 80px 80px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 16px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--gradient-accent);
+    border-radius: 2px;
+    margin: 20px auto 0;
+}
+
+.section-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 56px;
+}
+
+/* ===================================== */
+/* BENTO GRID — Современная сетка        */
+/* ===================================== */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+}
+
+/* Различные размеры карточек */
+.bento-card {
+    background: var(--gradient-card);
+    backdrop-filter: blur(var(--blur-sm));
+    -webkit-backdrop-filter: blur(var(--blur-sm));
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    transition: all var(--transition);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Внутреннее свечение при hover */
+.bento-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(circle at 50% 0%, var(--color-accent-light) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity var(--transition);
+    pointer-events: none;
+}
+
+.bento-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-border-hover);
+}
+
+.bento-card:hover::before {
+    opacity: 1;
+}
+
+/* Размеры Bento карточек */
+.bento-card.large {
+    grid-column: span 2;
+    grid-row: span 2;
+    padding: 40px;
+}
+
+.bento-card.wide {
+    grid-column: span 2;
+}
+
+.bento-card.tall {
+    grid-row: span 2;
+}
+
+/* Responsive Bento */
+@media (max-width: 1024px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bento-card.large {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+}
+
+@media (max-width: 640px) {
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bento-card.large,
+    .bento-card.wide {
+        grid-column: span 1;
+    }
+}
+
+/* ===================================== */
+/* КАРТОЧКИ — Обычные (для услуг превью) */
+/* ===================================== */
+.card {
+    background: var(--gradient-card);
+    backdrop-filter: blur(var(--blur-sm));
+    -webkit-backdrop-filter: blur(var(--blur-sm));
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    transition: all var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(circle at 50% 0%, var(--color-accent-light) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity var(--transition);
+    pointer-events: none;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-border-hover);
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+/* ===================================== */
+/* ИКОНКИ — SVG стиль                    */
+/* ===================================== */
+.service-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--gradient-subtle);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all var(--transition);
+}
+
+.service-icon svg {
+    width: 28px;
+    height: 28px;
+    stroke: var(--color-accent);
+    stroke-width: 1.5;
+    fill: none;
+}
+
+.card:hover .service-icon,
+.bento-card:hover .service-icon {
+    background: var(--color-accent-light);
+    border-color: var(--color-border-hover);
+    transform: scale(1.05);
+}
+
+/* Large icon for bento */
+.bento-card.large .service-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: var(--radius-lg);
+}
+
+.bento-card.large .service-icon svg {
+    width: 36px;
+    height: 36px;
+}
+
+/* ===================================== */
+/* FEATURE CARDS — Преимущества          */
+/* ===================================== */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+@media (max-width: 1024px) {
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.feature-card {
+    background: var(--gradient-card);
+    backdrop-filter: blur(var(--blur-sm));
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    text-align: center;
+    transition: all var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(circle at 50% 0%, var(--color-accent-light) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity var(--transition);
+    pointer-events: none;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-border-hover);
+}
+
+.feature-card:hover::before {
+    opacity: 1;
+}
+
+.feature-card .service-icon {
+    margin: 0 auto 16px;
+}
+
+/* ===================================== */
+/* SOFTWARE WINDOW MOCKUP                */
+/* ===================================== */
+.software-window {
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+    position: relative;
+    transition: all var(--transition);
+}
+
+.software-window:hover {
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
+    transform: translateY(-4px);
+}
+
+.window-header {
+    background: linear-gradient(180deg, #f8f7f6 0%, #f0efed 100%);
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    gap: 8px;
+}
+
+.window-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ddd;
+    transition: all var(--transition-fast);
+}
+
+.window-dot:nth-child(1) {
+    background: #ff5f56;
+}
+
+.window-dot:nth-child(2) {
+    background: #ffbd2e;
+}
+
+.window-dot:nth-child(3) {
+    background: #27c93f;
+}
+
+.software-window:hover .window-dot:nth-child(1) {
+    box-shadow: 0 0 8px #ff5f56;
+}
+
+.software-window:hover .window-dot:nth-child(2) {
+    box-shadow: 0 0 8px #ffbd2e;
+}
+
+.software-window:hover .window-dot:nth-child(3) {
+    box-shadow: 0 0 8px #27c93f;
+}
+
+/* ===================================== */
+/* CTA SECTION                           */
+/* ===================================== */
+.cta-section {
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 50% at 50% 50%, var(--color-accent-light) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* ===================================== */
+/* FOOTER                                */
+/* ===================================== */
+.footer {
+    background: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%);
+    color: #a0a0a0;
+    padding: 80px 0 40px;
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+}
+
+.footer a {
+    color: #a0a0a0;
+    transition: color var(--transition-fast);
+}
+
+.footer a:hover {
+    color: white;
+}
+
+.footer h4 {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* ===================================== */
+/* АНИМАЦИИ                              */
+/* ===================================== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger animation delays */
+.fade-in:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.fade-in:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.fade-in:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.fade-in:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+.fade-in:nth-child(5) {
+    transition-delay: 0.4s;
+}
+
+.fade-in:nth-child(6) {
+    transition-delay: 0.5s;
+}
+
+/* ===================================== */
+/* ФОРМЫ                                 */
+/* ===================================== */
+input,
+textarea {
+    font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-accent) !important;
+    box-shadow: 0 0 0 4px var(--color-accent-light);
+}
+
+/* ===================================== */
+/* УТИЛИТЫ                               */
+/* ===================================== */
+.text-gradient {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.glow-border {
+    position: relative;
+}
+
+.glow-border::after {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: var(--gradient-accent);
+    z-index: -1;
+    opacity: 0;
+    filter: blur(8px);
+    transition: opacity var(--transition);
+}
+
+.glow-border:hover::after {
+    opacity: 0.5;
+}
+
+/* ===================================== */
+/* RESPONSIVE                            */
+/* ===================================== */
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: 120px 0 80px;
+    }
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    h1 {
+        font-size: 2.25rem !important;
+    }
+
+    .bento-card,
+    .card {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero-logo-container {
+        margin-top: 48px;
+        order: -1;
+    }
+}
+
+/* ===================================== */
+/* LINK ARROWS                           */
+/* ===================================== */
+.link-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-accent);
+    transition: all var(--transition-fast);
+}
+
+.link-arrow svg {
+    width: 16px;
+    height: 16px;
+    transition: transform var(--transition-fast);
+}
+
+.link-arrow:hover {
+    color: var(--color-accent-hover);
+}
+
+.link-arrow:hover svg {
+    transform: translateX(4px);
+}
+
+/* ===================================== */
+/* CHECK LIST                            */
+/* ===================================== */
+.check-list {
+    list-style: none;
+}
+
+.check-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+    color: var(--color-text-secondary);
+}
+
+.check-list .check-icon {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    background: var(--color-accent-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+}
+
+.check-list .check-icon svg {
+    width: 12px;
+    height: 12px;
+    stroke: var(--color-accent);
+    stroke-width: 2.5;
+}
+
+/* ===================================== */
+/* IMAGE FRAMES                          */
+/* ===================================== */
+.image-frame {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 8px solid white;
+    transition: all var(--transition);
+}
+
+.image-frame:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
+}
+
+.image-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Placeholder for sections without images */
+.icon-placeholder {
+    background: var(--gradient-subtle);
+    border-radius: var(--radius-lg);
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-border);
+}
+
+.icon-placeholder svg {
+    width: 80px;
+    height: 80px;
+    stroke: var(--color-accent);
+    stroke-width: 1;
+    opacity: 0.8;
+}
+
+/* --- Tailwind-like Utilities --- */
+.h-10 {
+    height: 40px;
+}
+
+.h-16 {
+    height: 64px;
+}
+
+.h-24 {
+    height: 96px;
+}
+
+.w-10 {
+    width: 40px;
+}
+
+.w-16 {
+    width: 64px;
+}
+
+.w-24 {
+    width: 96px;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.w-auto {
+    width: auto;
+}
+
+.max-w-full {
+    max-width: 100%;
+}
+
+.object-contain {
+    object-fit: contain;
+}
+
+.rotate-90 {
+    transform: rotate(90deg);
+}
+
+.ring-2 {
+    box-shadow: 0 0 0 2px var(--color-accent-light);
+}
+
+.ring-4 {
+    box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.3);
+}

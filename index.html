@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Smart Solutions — IT-решения и консалтинг для мясоперерабатывающей промышленности">
+    <title>Smart Solutions — IT-решения и консалтинг</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💡</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- НАВИГАЦИЯ -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="images/logo.png" alt="Smart Solutions" class="h-10 w-auto">
+                    <span class="font-bold text-lg">Smart Solutions</span>
+                </a>
+                <div class="desktop-nav hidden md:flex items-center gap-1">
+                    <a href="marketing.html" class="nav-link">Маркетинг</a>
+                    <a href="it.html" class="nav-link">IT</a>
+                    <a href="optimization.html" class="nav-link">Оптимизация производства</a>
+                    <a href="about.html" class="nav-link">О нас</a>
+                    <a href="contacts.html" class="btn-primary ml-4">Контакты</a>
+                </div>
+                <button class="mobile-menu-btn flex md:hidden flex-col gap-1.5 p-2" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <a href="marketing.html" class="nav-link text-xl">Маркетинг</a>
+        <a href="it.html" class="nav-link text-xl">IT</a>
+        <a href="optimization.html" class="nav-link text-xl">Оптимизация производства</a>
+        <a href="about.html" class="nav-link text-xl">О нас</a>
+        <a href="contacts.html" class="btn-primary mt-4">Контакты</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero relative overflow-hidden">
+        <div class="container relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+
+                <!-- Левая часть: Глобус (имитация/лого) -->
+                <div class="lg:col-span-5 fade-in order-last lg:order-first flex justify-center">
+                    <div class="relative w-full max-w-md aspect-square flex items-center justify-center">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-orange-100 to-transparent rounded-full opacity-30 animate-pulse">
+                        </div>
+                        <img src="images/logo.png" alt="Smart Solutions Global"
+                            class="w-2/3 h-auto drop-shadow-2xl hero-logo-container">
+                    </div>
+                </div>
+
+                <!-- Правая часть: Текст и Факты -->
+                <div class="lg:col-span-7 fade-in">
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 leading-tight text-balance">
+                        Увеличиваем прибыль компаний через <span class="gradient-text">маркетинг, IT и
+                            эффективность производства</span>
+                    </h1>
+                    <p class="text-lg md:text-xl mb-8 leading-relaxed p-4 rounded-xl border border-dashed border-gray-200 bg-white/50 backdrop-blur-sm"
+                        style="color: var(--color-text-primary);">
+                        Быстрая диагностика, понятная дорожная карта, сопровождение внедрения. Работаем с руководством и
+                        командами на местах.
+                    </p>
+
+                    <!-- Факты (Grid 2x2) -->
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div
+                            class="bg-white/80 p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-center">
+                            <div class="text-sm font-bold text-gradient leading-tight">Задач реализовано<br>> 1 000
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white/80 p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-center">
+                            <div class="text-sm font-bold text-gradient leading-tight">Нам доверяют крупнейшие<br>FMCG
+                                производители</div>
+                        </div>
+                        <div
+                            class="bg-white/80 p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-center">
+                            <div class="text-sm font-bold text-gradient leading-tight">Экономический эффект только на
+                                одном заказчике > 3 млрд. руб</div>
+                        </div>
+                        <div
+                            class="bg-white/80 p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-center">
+                            <div class="text-sm font-bold text-gradient leading-tight">Первые результаты уже через 1
+                                месяц работы</div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <a href="contacts.html" class="btn-primary w-full md:w-auto text-center">Связаться с нами</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- НАПРАВЛЕНИЯ (Вместо преимуществ) -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title fade-in mb-12">Основные направления</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Карточка Маркетинг -->
+                <a href="marketing.html" class="card fade-in group cursor-pointer block hover:no-underline">
+                    <div
+                        class="h-48 mb-6 overflow-hidden rounded-xl relative bg-gradient-to-br from-[#f8f6f3] to-[#ebe7e2] border border-[#e0dcd6] flex flex-col items-center justify-center group-hover:shadow-lg group-hover:border-[#b5704d]/30 transition-all duration-300">
+                        <div
+                            class="w-20 h-20 rounded-full bg-[#b5704d]/10 flex items-center justify-center mb-3 group-hover:bg-[#b5704d]/15 transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-10 w-10 text-[#b5704d] transform group-hover:scale-110 transition-transform duration-300"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
+                            </svg>
+                        </div>
+                        <div class="text-[#1a1a1a] font-bold text-xl tracking-wide">Маркетинг</div>
+                    </div>
+                    <p class="text-sm" style="color: var(--color-text-secondary);">
+                        Маркетинговые исследования, анализ рынка и конкурентов, запуск новых продуктов.
+                    </p>
+                    <div class="mt-4 flex items-center text-sm font-semibold text-gradient">
+                        Перейти в раздел →
+                    </div>
+                </a>
+
+                <!-- Карточка IT -->
+                <a href="it.html" class="card fade-in group cursor-pointer block hover:no-underline">
+                    <div
+                        class="h-48 mb-6 overflow-hidden rounded-xl relative bg-gradient-to-br from-[#f8f6f3] to-[#ebe7e2] border border-[#e0dcd6] flex flex-col items-center justify-center group-hover:shadow-lg group-hover:border-[#b5704d]/30 transition-all duration-300">
+                        <div
+                            class="w-20 h-20 rounded-full bg-[#b5704d]/10 flex items-center justify-center mb-3 group-hover:bg-[#b5704d]/15 transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-10 w-10 text-[#b5704d] transform group-hover:scale-110 transition-transform duration-300"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div class="text-[#1a1a1a] font-bold text-xl tracking-wide text-center px-4">IT Стратегия</div>
+                    </div>
+                    <p class="text-sm" style="color: var(--color-text-secondary);">
+                        Цифровые решения, BI-аналитика, компьютерное зрение и автоматизация.
+                    </p>
+                    <div class="mt-4 flex items-center text-sm font-semibold text-gradient">
+                        Перейти в раздел →
+                    </div>
+                </a>
+
+                <!-- Карточка Оптимизация -->
+                <a href="optimization.html" class="card fade-in group cursor-pointer block hover:no-underline">
+                    <div
+                        class="h-48 mb-6 overflow-hidden rounded-xl relative bg-gradient-to-br from-[#f8f6f3] to-[#ebe7e2] border border-[#e0dcd6] flex flex-col items-center justify-center group-hover:shadow-lg group-hover:border-[#b5704d]/30 transition-all duration-300">
+                        <div
+                            class="w-20 h-20 rounded-full bg-[#b5704d]/10 flex items-center justify-center mb-3 group-hover:bg-[#b5704d]/15 transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-10 w-10 text-[#b5704d] transform group-hover:scale-110 transition-transform duration-300"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <div class="text-[#1a1a1a] font-bold text-xl tracking-wide text-center px-4">Оптимизация</div>
+                    </div>
+                    <p class="text-sm" style="color: var(--color-text-secondary);">
+                        Аудит процессов, повышение эффективности и консалтинг.
+                    </p>
+                    <div class="mt-4 flex items-center text-sm font-semibold text-gradient">
+                        Перейти в раздел →
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- УСЛУГИ BENTO GRID -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Что мы делаем</h2>
+            <p class="section-subtitle fade-in">Полный спектр IT-услуг и консалтинга</p>
+            <div class="bento-grid">
+                <!-- Большая карточка - Компьютерное зрение -->
+                <div class="bento-card large fade-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-2xl mb-3">Компьютерное зрение</h3>
+                    <p style="color: var(--color-text-secondary);" class="mb-6 flex-grow">
+                        Мониторинг на YOLO v11, подсчёт и трекинг объектов. Интеллектуальные системы видеомониторинга
+                        для фиксации ключевых показателей.
+                    </p>
+                    <a href="services.html#cv" class="link-arrow">
+                        Подробнее
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- BI-аналитика -->
+                <div class="bento-card fade-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />
+                            <path d="M22 12A10 10 0 0 0 12 2v10z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">BI-аналитика</h3>
+                    <p style="color: var(--color-text-secondary);" class="text-sm mb-4">OLAP-аналитика, дашборды,
+                        визуализация данных</p>
+                    <a href="services.html#bi" class="link-arrow">
+                        Подробнее
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Telegram -->
+                <div class="bento-card fade-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Telegram-инфраструктура</h3>
+                    <p style="color: var(--color-text-secondary);" class="text-sm mb-4">Боты, алертинг, интеграции с
+                        системами</p>
+                    <a href="services.html#telegram" class="link-arrow">
+                        Подробнее
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Контроль качества - широкая -->
+                <div class="bento-card wide fade-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Контроль качества</h3>
+                    <p style="color: var(--color-text-secondary);" class="text-sm mb-4">
+                        Автоматизированные системы контроля. Электронный журнал качества, трассировка партий.
+                    </p>
+                    <a href="services.html#qc" class="link-arrow">
+                        Подробнее
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Маркетинг -->
+                <div class="bento-card fade-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="12" />
+                            <line x1="12" y1="16" x2="12.01" y2="16" />
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Маркетинг под ключ</h3>
+                    <p style="color: var(--color-text-secondary);" class="text-sm mb-4">Исследования с фокус-группами,
+                        аналитика</p>
+                    <a href="services.html#marketing" class="link-arrow">
+                        Подробнее
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Консалтинг -->
+                <div class="bento-card fade-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Консалтинг</h3>
+                    <p style="color: var(--color-text-secondary);" class="text-sm mb-4">Оптимизация процессов, аудит,
+                        рекомендации</p>
+                    <a href="services.html#consulting" class="link-arrow">
+                        Подробнее
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-12 fade-in">
+                <a href="services.html" class="btn-secondary">Все услуги</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section-alt cta-section">
+        <div class="container">
+            <div class="max-w-3xl mx-auto text-center fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Готовы обсудить ваш проект?</h2>
+                <p style="color: var(--color-text-secondary);" class="mb-8 text-lg">Расскажите о ваших задачах — мы
+                    предложим
+                    оптимальное решение</p>
+                <a href="contacts.html" class="btn-primary">Оставить заявку →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="images/logo.png" alt="Smart Solutions" class="h-10 w-auto">
+                        <span class="font-bold text-lg text-white">Smart Solutions</span>
+                    </div>
+                    <p class="text-sm max-w-md" style="color: #9c9690;">IT-решения и консалтинг для мясоперерабатывающей
+                        промышленности.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Навигация</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="cases.html">Кейсы</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Контакты</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="mailto:info@smartsolutions.ru">info@smartsolutions.ru</a></li>
+                        <li><a href="tel:+7XXXXXXXXXX">+7 (XXX) XXX-XX-XX</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center text-sm" style="color: #6b6660;">
+                <p>© 2025 Smart Solutions. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
