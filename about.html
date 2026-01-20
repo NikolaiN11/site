@@ -13,12 +13,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav-cards.css">
 </head>
 
 <body>
     <nav class="navbar">
-        <div class="container">
-            <div class="flex items-center justify-between h-16">
+        <div class="navbar-container">
+            <div class="flex items-center justify-between h-16 w-full">
                 <a href="index.html" class="flex items-center gap-3">
                     <img src="images/logo.png" alt="Smart Solutions" class="h-10 w-auto">
                     <span class="font-bold text-lg">Smart Solutions</span>
@@ -46,10 +47,11 @@
         <a href="contacts.html" class="btn-primary mt-4">Контакты</a>
     </div>
 
-    <section class="pt-32 pb-16">
-        <div class="container">
-            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-center">О компании</h1>
-            <p class="text-xl text-center max-w-2xl mx-auto" style="color: var(--color-text-secondary);">Smart Solutions
+    <section class="hero relative overflow-hidden" style="min-height: auto; padding: 6rem 0 4rem;">
+        <div class="container relative z-10">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-6 text-center fade-in">О компании</h1>
+            <p class="text-lg text-center max-w-3xl mx-auto fade-in" style="color: var(--color-text-secondary);">Smart
+                Solutions
                 — ваш партнёр в цифровой трансформации</p>
         </div>
     </section>
@@ -61,15 +63,16 @@
     <section class="section">
         <div class="container">
             <h2 class="section-title fade-in mb-12">Команда экспертов</h2>
-            <div class="grid md:grid-cols-2 gap-x-8 gap-y-12">
+            <div class="grid md:grid-cols-2 gap-6">
 
                 <!-- Кирилл Чербунин -->
-                <div class="fade-in flex flex-col sm:flex-row gap-6 items-start">
-                    <div class="w-24 h-24 shrink-0 rounded-full overflow-hidden shadow-md bg-gray-200">
-                        <img src="images/team_cherbunin.jpg" alt="Кирилл Чербунин" class="w-full h-full object-cover">
+                <div class="team-member fade-in flex flex-col items-center text-center">
+                    <div class="team-avatar mb-4">
+                        <img src="images/team_cherbunin.jpg" alt="Кирилл Чербунин">
                     </div>
                     <div class="text-sm leading-relaxed" style="color: #1a1a1a;">
-                        <strong>Кирилл Чербунин</strong> — архитектор процессов и цифровой трансформации: топ-3
+                        <strong class="text-base block mb-2">Кирилл Чербунин</strong>
+                        Архитектор процессов и цифровой трансформации: топ-3
                         мясопереработки РФ + транснациональные корпорации. В активе: первый SAP IBP в России, цифровые
                         заводы с нейросетями (-10% логистики, +10% производительности, экономия 300+ млн ₽),
                         бренды-лидеры («Папа Может», «Деликайзер», «Вязанка», «Горячая Штучка»)
@@ -77,12 +80,13 @@
                 </div>
 
                 <!-- Козлов Илья -->
-                <div class="fade-in flex flex-col sm:flex-row gap-6 items-start">
-                    <div class="w-24 h-24 shrink-0 rounded-full overflow-hidden shadow-md bg-gray-200">
-                        <img src="images/team_kozlov.png" alt="Козлов Илья" class="w-full h-full object-cover">
+                <div class="team-member fade-in flex flex-col items-center text-center">
+                    <div class="team-avatar mb-4">
+                        <img src="images/team_kozlov.png" alt="Козлов Илья">
                     </div>
                     <div class="text-sm leading-relaxed" style="color: #1a1a1a;">
-                        <strong>Козлов Илья</strong> - работа в ИТ, в компаниях мясопереработки (ОМПК и Черкизово) 12
+                        <strong class="text-base block mb-2">Козлов Илья</strong>
+                        Работа в ИТ, в компаниях мясопереработки (ОМПК и Черкизово) 12
                         лет. Бывший CIO ОМПК, в подчинении 80+ человек; реорганизовал ИТ (создал проектный офис, усилил
                         1С), модернизировал ЦОДы, устранив простои. Инициировал: внедрение MDM, консолидацию MES и
                         перевод BI на Qlik Sense. Внедрил инструмент аналитики контроля веса фиксированной продукции —
@@ -91,12 +95,13 @@
                 </div>
 
                 <!-- Силантьев Антон -->
-                <div class="fade-in flex flex-col sm:flex-row gap-6 items-start">
-                    <div class="w-24 h-24 shrink-0 rounded-full overflow-hidden shadow-md bg-gray-200">
-                        <img src="images/team_silantyev.png" alt="Силантьев Антон" class="w-full h-full object-cover">
+                <div class="team-member fade-in flex flex-col items-center text-center">
+                    <div class="team-avatar mb-4">
+                        <img src="images/team_silantyev.png" alt="Силантьев Антон">
                     </div>
                     <div class="text-sm leading-relaxed" style="color: #1a1a1a;">
-                        <strong>Силантьев Антон</strong> — маркетолог с большим стажем: топ-3 компании мясопереработки
+                        <strong class="text-base block mb-2">Силантьев Антон</strong>
+                        Маркетолог с большим стажем: топ-3 компании мясопереработки
                         РФ + транснациональные корпорации. В активе — запуски брендов и новинок, ставших успешными
                         («Дугушка», «Деликайзер»), мощные ребрендинги и перезапуски линеек. Экспертиза: бренд-стратегия,
                         go-to-market, трейд и digital, исследования потребителя
@@ -104,12 +109,13 @@
                 </div>
 
                 <!-- Всеволод Акимов -->
-                <div class="fade-in flex flex-col sm:flex-row gap-6 items-start">
-                    <div class="w-24 h-24 shrink-0 rounded-full overflow-hidden shadow-md bg-gray-200">
-                        <img src="images/team_akimov.jpg" alt="Всеволод Акимов" class="w-full h-full object-cover">
+                <div class="team-member fade-in flex flex-col items-center text-center">
+                    <div class="team-avatar mb-4">
+                        <img src="images/team_akimov.jpg" alt="Всеволод Акимов">
                     </div>
                     <div class="text-sm leading-relaxed" style="color: #1a1a1a;">
-                        <strong>Всеволод Акимов</strong> — признанный эксперт мясоперерабатывающей отрасли с почти
+                        <strong class="text-base block mb-2">Всеволод Акимов</strong>
+                        Признанный эксперт мясоперерабатывающей отрасли с почти
                         30-летним стажем: в качестве индустриального директора ABI Product руководил командой из более
                         чем 5 000 человек, под его началом по всей России возводились и модернизировались ключевые
                         производственные площадки, что обеспечило компании беспрецедентный рост мощностей, оптимизацию
@@ -118,12 +124,13 @@
                 </div>
 
                 <!-- Сергей Сосыгин -->
-                <div class="fade-in flex flex-col sm:flex-row gap-6 items-start">
-                    <div class="w-24 h-24 shrink-0 rounded-full overflow-hidden shadow-md bg-gray-200">
-                        <img src="images/team_sosygin.jpg" alt="Сергей Сосыгин" class="w-full h-full object-cover">
+                <div class="team-member fade-in flex flex-col items-center text-center">
+                    <div class="team-avatar mb-4">
+                        <img src="images/team_sosygin.jpg" alt="Сергей Сосыгин">
                     </div>
                     <div class="text-sm leading-relaxed" style="color: #1a1a1a;">
-                        <strong>Сергей Сосыгин</strong> — бренд-директор и директор по маркетингу в компаниях
+                        <strong class="text-base block mb-2">Сергей Сосыгин</strong>
+                        Бренд-директор и директор по маркетингу в компаниях
                         ABI Product и Сибагро, с опытом более 15 лет. Возглавлял разработку и запуск федеральных
                         рекламных кампаний для «Горячей Штучки» и «Стародворских колбас», внедрял стратегию развития
                         продуктовых линеек и digital-активности, оптимизировал маркетинговые бюджеты и обеспечивал рост
@@ -132,12 +139,13 @@
                 </div>
 
                 <!-- Енюхин Леонид -->
-                <div class="fade-in flex flex-col sm:flex-row gap-6 items-start">
-                    <div class="w-24 h-24 shrink-0 rounded-full overflow-hidden shadow-md bg-gray-200">
-                        <img src="images/team_enyukhin.png" alt="Енюхин Леонид" class="w-full h-full object-cover">
+                <div class="team-member fade-in flex flex-col items-center text-center">
+                    <div class="team-avatar mb-4">
+                        <img src="images/team_enyukhin.png" alt="Енюхин Леонид">
                     </div>
                     <div class="text-sm leading-relaxed" style="color: #1a1a1a;">
-                        <strong>Енюхин Леонид</strong> — табличные OLAP-модели, Python-backend, сбор и аналитика данных,
+                        <strong class="text-base block mb-2">Енюхин Леонид</strong>
+                        Табличные OLAP-модели, Python-backend, сбор и аналитика данных,
                         автоматизация отчётности в Excel, промышленное внедрение ML
                     </div>
                 </div>

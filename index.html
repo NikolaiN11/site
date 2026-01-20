@@ -14,13 +14,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav-cards.css">
 </head>
 
 <body>
     <!-- НАВИГАЦИЯ -->
     <nav class="navbar">
-        <div class="container">
-            <div class="flex items-center justify-between h-16">
+        <div class="navbar-container">
+            <div class="flex items-center justify-between h-16 w-full">
                 <a href="index.html" class="flex items-center gap-3">
                     <img src="images/logo.png" alt="Smart Solutions" class="h-10 w-auto">
                     <span class="font-bold text-lg">Smart Solutions</span>
@@ -80,23 +81,26 @@
                     <!-- Факты (Grid 2x2) -->
                     <div class="grid grid-cols-2 gap-4 mb-8">
                         <div
-                            class="bg-white/80 p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-center">
-                            <div class="text-sm font-bold text-gradient leading-tight">Задач реализовано<br>> 1 000
+                            class="hero-fact-card bg-white/80 p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-center">
+                            <div class="text-sm font-bold text-gradient leading-tight">Задач реализовано<br><span
+                                    data-counter="1000" data-prefix="> ">0</span>
                             </div>
                         </div>
                         <div
-                            class="bg-white/80 p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-center">
+                            class="hero-fact-card bg-white/80 p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-center">
                             <div class="text-sm font-bold text-gradient leading-tight">Нам доверяют крупнейшие<br>FMCG
                                 производители</div>
                         </div>
                         <div
-                            class="bg-white/80 p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-center">
+                            class="hero-fact-card bg-white/80 p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-center">
                             <div class="text-sm font-bold text-gradient leading-tight">Экономический эффект только на
-                                одном заказчике > 3 млрд. руб</div>
+                                одном заказчике <span data-counter="3" data-prefix="> "
+                                    data-suffix=" млрд. руб">0</span></div>
                         </div>
                         <div
-                            class="bg-white/80 p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-center">
-                            <div class="text-sm font-bold text-gradient leading-tight">Первые результаты уже через 1
+                            class="hero-fact-card bg-white/80 p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-center">
+                            <div class="text-sm font-bold text-gradient leading-tight">Первые результаты уже через <span
+                                    data-counter="1">0</span>
                                 месяц работы</div>
                         </div>
                     </div>

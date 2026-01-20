@@ -20,8 +20,8 @@
 <body>
     <!-- НАВИГАЦИЯ -->
     <nav class="navbar">
-        <div class="container">
-            <div class="flex items-center justify-between h-16">
+        <div class="navbar-container">
+            <div class="flex items-center justify-between h-16 w-full">
                 <a href="index.html" class="flex items-center gap-3">
                     <img src="images/logo.png" alt="Smart Solutions" class="h-10 w-auto">
                     <span class="font-bold text-lg">Smart Solutions</span>
@@ -118,25 +118,24 @@
     </section>
 
     <!-- РАЗДЕЛ 1: Глубокий анализ рынка -->
-    <section id="research" class="section section-alt">
+    <section id="research" class="section section-alt relative">
+        <span class="section-number">01</span>
         <div class="container">
             <h2 class="section-title fade-in">Глубокий анализ рынка через исследования</h2>
 
             <!-- Статистика -->
             <div class="grid md:grid-cols-3 gap-6 mb-12">
-                <div class="card fade-in text-center p-8 shadow-md border-t-0"
+                <div class="stat-card card fade-in text-center p-8 shadow-md border-t-0"
                     style="background: var(--color-bg-secondary); border-radius: 16px;">
-                    <div class="text-sm font-semibold mb-2 uppercase tracking-wider"
-                        style="color: var(--color-accent);">Общий бюджет маркет исследований</div>
-                    <div class="text-3xl font-bold text-[#1a1a1a]">> 100 млн руб</div>
+                    <div class="stat-label" style="color: var(--color-accent);">Общий бюджет маркет исследований</div>
+                    <div class="stat-value"><span data-counter="100" data-prefix="> " data-suffix=" млн">0</span></div>
                 </div>
-                <div class="card fade-in text-center p-8 shadow-md border-t-0"
+                <div class="stat-card card fade-in text-center p-8 shadow-md border-t-0"
                     style="background: var(--color-bg-secondary); border-radius: 16px;">
-                    <div class="text-sm font-semibold mb-2 uppercase tracking-wider" style="color: var(--color-sage);">
-                        Проведено исследований</div>
-                    <div class="text-3xl font-bold text-[#1a1a1a]">> 400 шт</div>
+                    <div class="stat-label" style="color: var(--color-sage);">Проведено исследований</div>
+                    <div class="stat-value"><span data-counter="400" data-prefix="> " data-suffix=" шт">0</span></div>
                 </div>
-                <div class="card fade-in text-center p-8 shadow-md border-t-0"
+                <div class="stat-card card fade-in text-center p-8 shadow-md border-t-0"
                     style="background: var(--color-bg-secondary); border-radius: 16px;">
                     <div class="text-lg font-bold leading-tight text-[#1a1a1a]">Созданы отделы маркетинга и анализа,
                         инхаус в крупнейших FMCG компаниях</div>
@@ -202,29 +201,28 @@
     </section>
 
     <!-- РАЗДЕЛ 2: Разработка и запуск брендов -->
-    <section id="brands" class="section">
+    <section id="brands" class="section relative">
+        <span class="section-number">02</span>
         <div class="container">
             <h2 class="section-title fade-in">Разработка и запуск брендов под ключ</h2>
             <p class="section-subtitle fade-in">концепция, позиционирование, дизайны</p>
 
             <!-- Статистика -->
             <div class="grid md:grid-cols-3 gap-6 mb-12">
-                <div class="card fade-in text-center p-8 shadow-md border-t-0"
+                <div class="stat-card card fade-in text-center p-8 shadow-md border-t-0"
                     style="background: var(--color-bg-secondary); border-radius: 16px;">
-                    <div class="text-sm font-semibold mb-2 uppercase tracking-wider"
-                        style="color: var(--color-accent);">Запущено брендов</div>
-                    <div class="text-3xl font-bold text-[#1a1a1a]">> 10</div>
+                    <div class="stat-label" style="color: var(--color-accent);">Запущено брендов</div>
+                    <div class="stat-value"><span data-counter="10" data-prefix="> ">0</span></div>
                 </div>
-                <div class="card fade-in text-center p-8 shadow-md border-t-0"
+                <div class="stat-card card fade-in text-center p-8 shadow-md border-t-0"
                     style="background: var(--color-bg-secondary); border-radius: 16px;">
-                    <div class="text-sm font-semibold mb-2 uppercase tracking-wider" style="color: var(--color-sage);">
-                        Бренд #1</div>
+                    <div class="stat-label" style="color: var(--color-sage);">Бренд #1</div>
                     <div class="text-xl font-bold leading-tight text-[#1a1a1a]">В Светофоре в категории КИ</div>
                 </div>
-                <div class="card fade-in text-center p-8 shadow-md border-t-0"
+                <div class="stat-card card fade-in text-center p-8 shadow-md border-t-0"
                     style="background: var(--color-bg-secondary); border-radius: 16px;">
-                    <div class="text-xl font-bold leading-tight text-[#1a1a1a]">Разработано более 150 концептов разных
-                        брендов</div>
+                    <div class="stat-value"><span data-counter="150" data-prefix="> ">0</span></div>
+                    <div class="text-sm font-bold text-[#1a1a1a]">концептов разных брендов</div>
                 </div>
             </div>
 
@@ -299,21 +297,23 @@
     </section>
 
     <!-- РАЗДЕЛ 3: Ценовое позиционирование -->
-    <section id="pricing" class="section section-alt">
+    <section id="pricing" class="section section-alt relative">
+        <span class="section-number">03</span>
         <div class="container">
             <h2 class="section-title fade-in">Определение ценового позиционирования</h2>
 
             <!-- Статистика -->
             <div class="grid md:grid-cols-2 gap-6 mb-12 max-w-4xl mx-auto">
-                <div class="card fade-in text-center p-8 shadow-md border-t-0"
+                <div class="stat-card card fade-in text-center p-8 shadow-md border-t-0"
                     style="background: var(--color-bg-secondary); border-radius: 16px;">
-                    <div class="text-xl font-bold leading-tight text-[#1a1a1a]">Выстраивание ценового
-                        позиционирования > 1 500 SKU</div>
+                    <div class="stat-value"><span data-counter="1500" data-prefix="> " data-suffix=" SKU">0</span></div>
+                    <div class="text-sm font-bold text-[#1a1a1a]">ценовое позиционирование</div>
                 </div>
-                <div class="card fade-in text-center p-8 shadow-md border-t-0"
+                <div class="stat-card card fade-in text-center p-8 shadow-md border-t-0"
                     style="background: var(--color-bg-secondary); border-radius: 16px;">
-                    <div class="text-xl font-bold leading-tight text-[#1a1a1a]">Структурированно и разделено внутри
-                        портфеля компании > 30 брендов и линеек</div>
+                    <div class="stat-value"><span data-counter="30" data-prefix="> " data-suffix=" брендов">0</span>
+                    </div>
+                    <div class="text-sm font-bold text-[#1a1a1a]">и линеек структурировано</div>
                 </div>
             </div>
 
@@ -383,20 +383,21 @@
     </section>
 
     <!-- РАЗДЕЛ 4: Работа с дизайнами -->
-    <section id="design" class="section">
+    <section id="design" class="section relative">
+        <span class="section-number">04</span>
         <div class="container">
             <h2 class="section-title fade-in">Работа с дизайнами, обновление текущего портфеля</h2>
 
             <!-- Статистика -->
             <div class="grid md:grid-cols-2 gap-6 mb-12 max-w-4xl mx-auto">
-                <div class="card fade-in text-center p-8 shadow-md border-t-0"
+                <div class="stat-card card fade-in text-center p-8 shadow-md border-t-0"
                     style="background: var(--color-bg-secondary); border-radius: 16px;">
-                    <div class="text-xl font-bold leading-tight text-[#1a1a1a]">Доработали и обновили > 10 существующих
-                        брендов (с последующим ростом продаж)</div>
+                    <div class="stat-value"><span data-counter="10" data-prefix="> ">0</span></div>
+                    <div class="text-sm font-bold text-[#1a1a1a]">существующих брендов обновлено (с ростом продаж)</div>
                 </div>
-                <div class="card fade-in text-center p-8 shadow-md border-t-0"
+                <div class="stat-card card fade-in text-center p-8 shadow-md border-t-0"
                     style="background: var(--color-bg-secondary); border-radius: 16px;">
-                    <div class="text-xl font-bold leading-tight text-[#1a1a1a]">Отслеживание тенденций рынка и
+                    <div class="text-lg font-bold leading-tight text-[#1a1a1a]">Отслеживание тенденций рынка и
                         актуализация портфелей под современные стандарты</div>
                 </div>
             </div>

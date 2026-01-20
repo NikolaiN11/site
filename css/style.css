@@ -67,6 +67,10 @@
 
 html {
     scroll-behavior: smooth;
+    /* Резервируем место под скроллбар чтобы контент не сдвигался */
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+    scrollbar-gutter: stable;
 }
 
 body {
@@ -76,7 +80,9 @@ body {
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     position: relative;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
+    width: 100%;
+    max-width: 100vw;
 }
 
 /* Декоративные блобы — анимированные */
@@ -201,16 +207,38 @@ a:hover {
     left: 0;
     right: 0;
     z-index: 1000;
+    height: 64px;
+    min-height: 64px;
+    max-height: 64px;
     background: rgba(250, 249, 247, 0.85);
     backdrop-filter: blur(var(--blur-md));
     -webkit-backdrop-filter: blur(var(--blur-md));
     border-bottom: 1px solid var(--color-border);
-    transition: all var(--transition);
+    transition: box-shadow var(--transition), background var(--transition);
+}
+
+/* Специальный контейнер для навбара — изолированный от остальных */
+.navbar-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 .navbar.scrolled {
     box-shadow: var(--shadow-md);
     background: rgba(250, 249, 247, 0.95);
+}
+
+/* Logo in navbar */
+.navbar a img {
+    height: 40px;
+    width: auto;
+    flex-shrink: 0;
 }
 
 .nav-link {
@@ -220,9 +248,10 @@ a:hover {
     font-size: 15px;
     font-weight: 500;
     color: var(--color-text-secondary);
-    transition: all var(--transition-fast);
+    transition: color var(--transition-fast), background var(--transition-fast);
     border-radius: var(--radius-sm);
     position: relative;
+    white-space: nowrap;
 }
 
 .nav-link::after {
@@ -286,15 +315,22 @@ a:hover {
     bottom: 0;
     background: rgba(250, 249, 247, 0.98);
     backdrop-filter: blur(var(--blur-lg));
+    -webkit-backdrop-filter: blur(var(--blur-lg));
     padding: 32px 24px;
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 8px;
     z-index: 999;
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform var(--transition), opacity var(--transition), visibility var(--transition);
 }
 
 .mobile-menu.active {
-    display: flex;
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
 }
 
 /* ===================================== */
@@ -1182,4 +1218,392 @@ textarea:focus {
 
 .ring-4 {
     box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.3);
+}
+
+/* ===================================== */
+/* PREMIUM ENHANCEMENTS                  */
+/* ===================================== */
+
+/* --- Scroll Progress Indicator --- */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: var(--gradient-accent);
+    z-index: 1100;
+    transition: width 0.1s linear;
+}
+
+/* --- Button Shine Effect --- */
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 60%;
+    height: 200%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
+    transform: skewX(-25deg);
+    transition: none;
+}
+
+.btn-primary:hover::after {
+    animation: btn-shine 0.6s ease-out;
+}
+
+@keyframes btn-shine {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 150%;
+    }
+}
+
+/* --- Enhanced Team Member Cards --- */
+.team-member {
+    padding: 20px;
+    background: var(--gradient-card);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition);
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.team-member:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-border-hover);
+}
+
+.team-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.team-avatar::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    background: var(--gradient-accent);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.team-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+/* --- Section Numbers --- */
+.section-number {
+    position: absolute;
+    top: -20px;
+    left: 24px;
+    font-size: clamp(4rem, 10vw, 8rem);
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-border);
+    opacity: 0.4;
+    line-height: 1;
+    pointer-events: none;
+    z-index: 0;
+    user-select: none;
+}
+
+/* --- Animated Counter --- */
+.stat-counter {
+    display: inline-block;
+}
+
+.stat-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-accent);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-secondary);
+    margin-bottom: 8px;
+}
+
+/* --- Enhanced Card Hover with Tilt --- */
+.card-tilt {
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card-tilt:hover {
+    transform: translateY(-8px) rotateX(2deg);
+}
+
+/* --- Improved Check List Animation --- */
+.check-list li {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideInCheck 0.5s ease forwards;
+}
+
+.check-list li:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.check-list li:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.check-list li:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.check-list li:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.check-list li:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.check-list li:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+@keyframes slideInCheck {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* --- Animated Check Icon --- */
+.check-list .check-icon svg {
+    transform: scale(0);
+    animation: popIn 0.3s ease forwards;
+    animation-delay: inherit;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0) rotate(-45deg);
+    }
+
+    70% {
+        transform: scale(1.2) rotate(0deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+/* --- Footer Link Underline Effect --- */
+.footer a {
+    position: relative;
+}
+
+.footer a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--color-accent);
+    transition: width var(--transition-fast);
+}
+
+.footer a:hover::after {
+    width: 100%;
+}
+
+/* --- Animated Gradient Line (Footer Top) --- */
+.footer::before {
+    background: linear-gradient(90deg,
+            transparent,
+            var(--color-accent),
+            var(--color-sage),
+            var(--color-accent),
+            transparent);
+    background-size: 200% 100%;
+    animation: gradientMove 4s linear infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 100% 0;
+    }
+
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+/* --- Hero Facts Cards Enhancement --- */
+.hero-fact-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-fact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient-accent);
+}
+
+/* --- Service Card Icon Pulse --- */
+.card:hover .service-icon-wrapper svg,
+.card:hover .service-icon svg {
+    animation: iconPulse 0.5s ease;
+}
+
+@keyframes iconPulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* --- Image Hover Zoom --- */
+.image-frame img {
+    transition: transform var(--transition);
+}
+
+.image-frame:hover img {
+    transform: scale(1.03);
+}
+
+/* --- Software Window Subtle Animation --- */
+.software-window:hover .window-dot {
+    animation: dotBounce 0.4s ease;
+}
+
+@keyframes dotBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+.software-window:hover .window-dot:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.software-window:hover .window-dot:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.software-window:hover .window-dot:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+/* --- Navigation Card Enhancement (Marketing Page) --- */
+.nav-card-icon {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 24px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--color-accent-light) 0%, rgba(181, 112, 77, 0.2) 100%);
+    border: 1px solid rgba(181, 112, 77, 0.2);
+    transition: all var(--transition);
+}
+
+.card:hover .nav-card-icon {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 24px rgba(181, 112, 77, 0.2);
+}
+
+.nav-card-icon img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    opacity: 0.9;
+    transition: opacity var(--transition-fast);
+}
+
+.card:hover .nav-card-icon img {
+    opacity: 1;
+}
+
+/* --- CTA Section Enhancement --- */
+.cta-section {
+    position: relative;
+}
+
+.cta-section::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, var(--color-accent-light) 0%, transparent 70%);
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.cta-section>.container {
+    position: relative;
+    z-index: 1;
 }
