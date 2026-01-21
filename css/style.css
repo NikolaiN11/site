@@ -1600,3 +1600,11 @@ textarea:focus {
 .bg-white.rounded-2xl.shadow-lg:hover img {
     transform: scale(1.05);
 }
+
+/* Адаптивное масштабирование для IT отчета (только десктоп) */
+@media (min-width: 1024px) {
+    .lg-scale-123 {
+        transform: scale(1.23);
+        transform-origin: top right;
+    }
+}
