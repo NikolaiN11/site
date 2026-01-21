@@ -26,7 +26,7 @@
 
     /* Градиенты */
     --gradient-accent: linear-gradient(135deg, #b5704d 0%, #d4a574 50%, #5a7a5a 100%);
-    --gradient-subtle: linear-gradient(135deg, rgba(181, 112, 77, 0.08) 0%, rgba(90, 122, 90, 0.06) 100%);
+    --gradient-subtle: linear-gradient(135deg, rgba(181, 112, 77, 0.18) 0%, rgba(90, 122, 90, 0.12) 100%);
     --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
 
     /* Границы */
@@ -1277,7 +1277,7 @@ textarea:focus {
     background: var(--gradient-card);
     border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: var(--radius-lg);
-    transition: all var(--transition);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
     max-width: 100%;
     overflow: hidden;
 }
@@ -1606,4 +1606,22 @@ textarea:focus {
 .cta-section>.container {
     position: relative;
     z-index: 1;
+}
+
+/* --- Before/After Product Cards Hover --- */
+.bg-white.rounded-2xl.shadow-lg {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.bg-white.rounded-2xl.shadow-lg:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.bg-white.rounded-2xl.shadow-lg img {
+    transition: transform 0.2s ease;
+}
+
+.bg-white.rounded-2xl.shadow-lg:hover img {
+    transform: scale(1.05);
 }
