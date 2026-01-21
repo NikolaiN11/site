@@ -1008,7 +1008,7 @@ a:hover {
 
 .fade-in.fade-in-late {
     transform: translateY(45px);
-    transition: opacity 1.0s ease, transform 1.0s ease;
+    transition: opacity 1.5s ease, transform 1.5s ease;
     transition-delay: 0s;
     will-change: opacity, transform;
 }
