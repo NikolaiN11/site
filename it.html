@@ -579,8 +579,7 @@
             var swiper = new Swiper(".custom-swiper", {
                 loop: true,
                 spaceBetween: 30,
-                effect: "fade", // Красивое исчезновение вместо прокрутки, можно поменять на slide
-                fadeEffect: { crossFade: true },
+                effect: "slide", // slide более надежен на мобильных
                 autoplay: {
                     delay: 5000,
                     disableOnInteraction: true, // Остановить автопрокрутку, если юзер кликнул

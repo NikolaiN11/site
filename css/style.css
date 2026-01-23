@@ -1928,10 +1928,20 @@ img[data-lightbox] {
     /* Больше места для точек */
 }
 
-/* На мобильных (меньше 768px) уменьшаем высоту */
+/* На мобильных делаем высоту адаптивной */
 @media (max-width: 768px) {
     .custom-swiper {
-        height: 350px;
+        height: auto;
+        min-height: 280px;
+        max-height: 400px;
+    }
+
+    .swiper-slide {
+        height: auto !important;
+    }
+
+    .swiper-slide img {
+        max-height: 350px;
     }
 }
 

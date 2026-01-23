@@ -470,8 +470,7 @@
             var swiper = new Swiper(".custom-swiper", {
                 loop: true,
                 spaceBetween: 30,
-                effect: "fade",
-                fadeEffect: { crossFade: true },
+                effect: "slide", // slide более надежен на мобильных
                 autoplay: {
                     delay: 5000,
                     disableOnInteraction: true,
