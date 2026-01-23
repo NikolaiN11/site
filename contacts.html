@@ -88,8 +88,7 @@
 
             <div class="mb-16">
                 <button onclick="document.getElementById('contactModal').showModal()"
-                    class="btn-primary text-xl px-12 py-5 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300"
-                    >
+                    class="btn-primary text-xl px-12 py-5 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300">
                     Оставить заявку на сотрудничество
                 </button>
             </div>
@@ -115,7 +114,19 @@
                 </svg>
             </button>
             <h3 class="text-2xl font-bold mb-6 text-center">Заявка на сотрудничество</h3>
-            <form class="space-y-4" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Сообщение об успехе (скрыто по умолчанию) -->
+            <div id="form-result" class="hidden text-center py-10 fade-in">
+                <div
+                    class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 text-green-500 mb-4">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Заявка отправлена!</h3>
+                <p class="text-gray-600">Мы свяжемся с вами в ближайшее время.</p>
+            </div>
+
+            <form id="contactForm" class="space-y-4" action="https://api.web3forms.com/submit" method="POST">
                 <input type="hidden" name="access_key" value="01ea9565-90c1-4703-a846-e3263af6cb07">
                 <input type="checkbox" name="botcheck" class="hidden" style="display:none">
                 <div>
@@ -138,7 +149,8 @@
                     <textarea rows="4" name="message" required
                         class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none bg-gray-50"></textarea>
                 </div>
-                <button type="submit" class="w-full btn-primary py-3 rounded-lg mt-2">Отправить заявку</button>
+                <button type="submit" class="w-full btn-primary py-3 rounded-lg mt-2 transition-all">Отправить
+                    заявку</button>
             </form>
         </div>
     </dialog>
@@ -148,7 +160,8 @@
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div class="md:col-span-2">
                     <div class="flex items-center gap-3 mb-4">
-                        <img src="images/logo.png" alt="Smart Solutions" class="h-10 w-auto" loading="lazy" decoding="async">
+                        <img src="images/logo.png" alt="Smart Solutions" class="h-10 w-auto" loading="lazy"
+                            decoding="async">
                         <span class="font-bold text-lg text-white">Smart Solutions</span>
                     </div>
                     <p class="text-sm max-w-md" style="color: #9c9690;">Увеличиваем прибыль компаний через маркетинг, IT
@@ -180,6 +193,77 @@
         </div>
     </footer>
     <script src="js/main.js"></script>
+    <script>
+        // Обработка отправки формы через AJAX (чтобы не было редиректа)
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('contactForm');
+            const result = document.getElementById('form-result');
+
+            if (form) {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    const originalBtnText = submitBtn.innerText;
+
+                    // Показываем состояние загрузки
+                    submitBtn.innerText = 'Отправка...';
+                    submitBtn.disabled = true;
+                    submitBtn.style.opacity = '0.7';
+
+                    const formData = new FormData(form);
+                    const object = Object.fromEntries(formData);
+                    const json = JSON.stringify(object);
+
+                    fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: json
+                    })
+                        .then(async (response) => {
+                            let json = await response.json();
+                            if (response.status == 200) {
+                                // Успех: скрываем форму, показываем сообщение
+                                form.style.display = 'none';
+                                result.classList.remove('hidden');
+
+                                // Через 3 секунды закрываем модальное окно и сбрасываем форму
+                                setTimeout(() => {
+                                    const modal = document.getElementById('contactModal');
+                                    if (modal) modal.close();
+
+                                    // Сброс состояния для следующего открытия
+                                    setTimeout(() => {
+                                        form.reset();
+                                        form.style.display = 'block';
+                                        result.classList.add('hidden');
+                                        submitBtn.innerText = originalBtnText;
+                                        submitBtn.disabled = false;
+                                        submitBtn.style.opacity = '1';
+                                    }, 500);
+                                }, 3000);
+                            } else {
+                                // Ошибка API
+                                console.error(response);
+                                submitBtn.innerText = 'Ошибка. Попробуйте снова.';
+                                submitBtn.disabled = false;
+                                submitBtn.style.opacity = '1';
+                            }
+                        })
+                        .catch(error => {
+                            // Сетевая ошибка
+                            console.error(error);
+                            submitBtn.innerText = 'Ошибка сети';
+                            submitBtn.disabled = false;
+                            submitBtn.style.opacity = '1';
+                        });
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
