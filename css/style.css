@@ -1921,6 +1921,12 @@ img[data-lightbox] {
 /* --- Стили для Swiper Slider --- */
 .custom-swiper {
     width: 100%;
+    max-width: 100%;
+    /* Не даём расти больше родителя */
+    min-width: 0;
+    /* Критично для Grid/Flexbox! */
+    overflow: hidden;
+    /* Предотвращаем "взрыв" ширины */
     height: 500px;
     /* Фиксированная высота = стабильные стрелки */
     border-radius: 16px;
@@ -1928,20 +1934,16 @@ img[data-lightbox] {
     /* Больше места для точек */
 }
 
-/* На мобильных делаем высоту адаптивной */
+/* На мобильных задаём фиксированную высоту (Swiper требует явную высоту!) */
 @media (max-width: 768px) {
     .custom-swiper {
-        height: auto;
-        min-height: 280px;
-        max-height: 400px;
-    }
-
-    .swiper-slide {
-        height: auto !important;
+        height: 300px !important;
+        padding-bottom: 50px;
     }
 
     .swiper-slide img {
-        max-height: 350px;
+        max-height: 280px;
+        width: auto;
     }
 }
 
