@@ -2033,3 +2033,15 @@ img[data-lightbox] {
     background: #b5704d !important;
     opacity: 1;
 }
+
+/* --- Подсветка статистики внутри текста --- */
+.stat-highlight {
+    font-size: 1.25em;
+    font-weight: 800;
+    color: var(--color-accent);
+    white-space: nowrap;
+    background: linear-gradient(135deg, var(--color-accent) 0%, #d4a574 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
