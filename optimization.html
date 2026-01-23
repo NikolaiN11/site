@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Critical CSS - предотвращает FOUC */
@@ -194,8 +195,10 @@
                 <!-- Картинка 1 -->
                 <div class="fade-in">
                     <div class="card p-2 shadow-lg rotate-1 opt-image-card is-clickable">
-                        <img src="images/opt_sim_large.png" alt="Оптимизация СиМ" class="w-full rounded-lg" data-lightbox
-                            onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'bg-gray-100 rounded-lg flex items-center justify-center text-gray-400 p-12 text-center border-2 border-dashed border-gray-300\'><div><div class=\'text-4xl mb-2\'>📦</div><div>Изображение<br>opt_sim_large.png</div></div></div>';" loading="lazy" decoding="async">
+                        <img src="images/opt_sim_large.png" alt="Оптимизация СиМ" class="w-full rounded-lg"
+                            data-lightbox
+                            onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'bg-gray-100 rounded-lg flex items-center justify-center text-gray-400 p-12 text-center border-2 border-dashed border-gray-300\'><div><div class=\'text-4xl mb-2\'>📦</div><div>Изображение<br>opt_sim_large.png</div></div></div>';"
+                            loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
@@ -233,7 +236,8 @@
                     <div class="card p-2 shadow-lg -rotate-1 opt-image-card is-clickable">
                         <img src="images/opt_productivity_large.png" alt="Повышение производительности"
                             class="w-full rounded-lg" data-lightbox
-                            onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'bg-gray-100 rounded-lg flex items-center justify-center text-gray-400 p-12 text-center border-2 border-dashed border-gray-300\'><div><div class=\'text-4xl mb-2\'>🚀</div><div>Изображение<br>opt_productivity_large.png</div></div></div>';" loading="lazy" decoding="async">
+                            onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'bg-gray-100 rounded-lg flex items-center justify-center text-gray-400 p-12 text-center border-2 border-dashed border-gray-300\'><div><div class=\'text-4xl mb-2\'>🚀</div><div>Изображение<br>opt_productivity_large.png</div></div></div>';"
+                            loading="lazy" decoding="async">
                     </div>
                 </div>
 
@@ -337,8 +341,10 @@
                 <!-- Картинка 3 -->
                 <div class="fade-in">
                     <div class="card p-2 shadow-lg rotate-1 opt-image-card is-clickable">
-                        <img src="images/opt_control_large.png" alt="Внедрение точек контроля" class="w-full rounded-lg" data-lightbox
-                            onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'bg-gray-100 rounded-lg flex items-center justify-center text-gray-400 p-12 text-center border-2 border-dashed border-gray-300\'><div><div class=\'text-4xl mb-2\'>🛡️</div><div>Изображение<br>opt_control_large.png</div></div></div>';" loading="lazy" decoding="async">
+                        <img src="images/opt_control_large.png" alt="Внедрение точек контроля" class="w-full rounded-lg"
+                            data-lightbox
+                            onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'bg-gray-100 rounded-lg flex items-center justify-center text-gray-400 p-12 text-center border-2 border-dashed border-gray-300\'><div><div class=\'text-4xl mb-2\'>🛡️</div><div>Изображение<br>opt_control_large.png</div></div></div>';"
+                            loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
@@ -372,16 +378,22 @@
 
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <!-- Картинка 4 (Слева) -->
-                <div class="fade-in order-last md:order-first">
-                    <div class="grid gap-6">
-                        <div class="card p-2 shadow-lg -rotate-1 opt-image-card is-clickable">
-                            <img src="images/opt_quality_large.png" alt="Управление качеством" class="w-full rounded-lg" data-lightbox
-                                onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'bg-gray-100 rounded-lg flex items-center justify-center text-gray-400 p-12 text-center border-2 border-dashed border-gray-300\'><div><div class=\'text-4xl mb-2\'>💎</div><div>Изображение<br>opt_quality_large.png</div></div></div>';" loading="lazy" decoding="async">
+                <!-- Картинка (Слева) теперь в СЛАЙДЕРЕ -->
+                <div class="fade-in order-last md:order-first w-full">
+                    <div class="swiper custom-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="images/opt_quality_large.png" alt="Управление качеством: Пример 1"
+                                    data-lightbox loading="lazy" decoding="async" class="w-full rounded-lg">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/opt_quality_large_2.png" alt="Управление качеством: Пример 2"
+                                    data-lightbox loading="lazy" decoding="async" class="w-full rounded-lg">
+                            </div>
                         </div>
-                        <div class="card p-2 shadow-lg rotate-1 opt-image-card is-clickable">
-                            <img src="images/opt_quality_large_2.png" alt="Управление качеством" class="w-full rounded-lg" data-lightbox
-                                onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'bg-gray-100 rounded-lg flex items-center justify-center text-gray-400 p-12 text-center border-2 border-dashed border-gray-300\'><div><div class=\'text-4xl mb-2\'>💎</div><div>Изображение<br>opt_quality_large_2.png</div></div></div>';" loading="lazy" decoding="async">
-                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
 
@@ -420,7 +432,8 @@
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div class="md:col-span-2">
                     <div class="flex items-center gap-3 mb-4">
-                        <img src="images/logo.png" alt="Smart Solutions" class="h-10 w-auto" loading="lazy" decoding="async">
+                        <img src="images/logo.png" alt="Smart Solutions" class="h-10 w-auto" loading="lazy"
+                            decoding="async">
                         <span class="font-bold text-lg text-white">Smart Solutions</span>
                     </div>
                     <p class="text-sm max-w-md" style="color: #9c9690;">Увеличиваем прибыль компаний через маркетинг, IT
@@ -451,6 +464,33 @@
         </div>
     </footer>
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var swiper = new Swiper(".custom-swiper", {
+                loop: true,
+                spaceBetween: 30,
+                effect: "fade",
+                fadeEffect: { crossFade: true },
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: true,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                keyboard: {
+                    enabled: true,
+                },
+                grabCursor: true
+            });
+        });
+    </script>
 </body>
 
 </html>

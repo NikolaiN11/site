@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Critical CSS - предотвращает FOUC */
@@ -222,7 +223,8 @@
                         <div class="window-content bg-white p-2">
                             <img src="images/it_cv_screenshot.png" alt="Система компьютерного зрения" data-lightbox
                                 style="width: 100%; height: auto; display: block; border-radius: 4px;"
-                                onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'padding: 100px 20px; text-align: center; color: #999; background: #f5f5f5;\'>Скриншот CV системы<br>(it_cv_screenshot.png)</div>';" loading="lazy" decoding="async">
+                                onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'padding: 100px 20px; text-align: center; color: #999; background: #f5f5f5;\'>Скриншот CV системы<br>(it_cv_screenshot.png)</div>';"
+                                loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -310,7 +312,8 @@
                         <div class="window-content bg-white p-2">
                             <img src="images/it_dashboard.png" alt="BI Дашборд" data-lightbox
                                 style="width: 100%; height: auto; display: block; border-radius: 4px;"
-                                onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'padding: 100px 20px; text-align: center; color: #999; background: #f5f5f5;\'>Скриншот Дашборда<br>(it_dashboard.png)</div>';" loading="lazy" decoding="async">
+                                onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'padding: 100px 20px; text-align: center; color: #999; background: #f5f5f5;\'>Скриншот Дашборда<br>(it_dashboard.png)</div>';"
+                                loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -399,22 +402,31 @@
                     </ul>
                 </div>
 
-                <!-- Правая колонка: ВИЗУАЛЬНЫЙ ХАБ (Все картинки вместе) -->
-                <div class="fade-in space-y-4 ml-auto">
-                    <!-- Верх: График -->
-                    <div class="image-frame shadow-xl w-full" style="border-radius: 16px;">
-                        <img src="images/it_reports_2.jpg" alt="Дашборд — График производительности"
-                            class="w-full rounded-lg block" data-lightbox loading="lazy" decoding="async">
-                    </div>
-
-                    <!-- Низ: Два отчета рядом (Адаптив: 1 колонка на мобайле, сетка на десктопе) -->
-                    <div class="grid grid-cols-1 lg:grid-cols-[58fr_42fr] gap-4 items-start">
-                        <div class="image-frame shadow-xl" style="border-radius: 16px; width: fit-content;">
-                            <img src="images/it_reports_3.jpg" alt="Детальные данные" class="rounded-lg block" data-lightbox loading="lazy" decoding="async">
+                <!-- Правая колонка: СЛАЙДЕР С КАРТИНКАМИ -->
+                <div class="fade-in space-y-4 ml-auto w-full">
+                    <!-- Swiper Carousel -->
+                    <div class="swiper custom-swiper">
+                        <div class="swiper-wrapper">
+                            <!-- Слайд 1: График производительности -->
+                            <div class="swiper-slide">
+                                <img src="images/it_reports_2.jpg" alt="Дашборд — График производительности"
+                                    data-lightbox loading="lazy" decoding="async">
+                            </div>
+                            <!-- Слайд 2: Детальные данные -->
+                            <div class="swiper-slide">
+                                <img src="images/it_reports_3.jpg" alt="Детальные данные" data-lightbox loading="lazy"
+                                    decoding="async">
+                            </div>
+                            <!-- Слайд 3: Telegram Сводка -->
+                            <div class="swiper-slide">
+                                <img src="images/it_reports_1.jpg" alt="Telegram Сводка" data-lightbox loading="lazy"
+                                    decoding="async">
+                            </div>
                         </div>
-                        <div class="image-frame shadow-xl" style="border-radius: 16px; width: fit-content;">
-                            <img src="images/it_reports_1.jpg" alt="Telegram Сводка" class="rounded-lg block" data-lightbox loading="lazy" decoding="async">
-                        </div>
+                        <!-- Навигация -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
 
@@ -502,7 +514,8 @@
                     <div class="image-frame shadow-xl" style="max-width: 300px; margin: 0 auto; display: block;">
                         <img src="images/it_quality_bot.jpg" alt="Бот качества" data-lightbox class="w-full rounded-lg"
                             style="display: block;"
-                            onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'padding: 100px 20px; text-align: center; color: #999; background: #fff;\'>Скриншот Бота<br>(it_quality_bot.jpg)</div>';" loading="lazy" decoding="async">
+                            onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'padding: 100px 20px; text-align: center; color: #999; background: #fff;\'>Скриншот Бота<br>(it_quality_bot.jpg)</div>';"
+                            loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
@@ -527,7 +540,8 @@
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div class="md:col-span-2">
                     <div class="flex items-center gap-3 mb-4">
-                        <img src="images/logo.png" alt="Smart Solutions" class="h-10 w-auto" loading="lazy" decoding="async">
+                        <img src="images/logo.png" alt="Smart Solutions" class="h-10 w-auto" loading="lazy"
+                            decoding="async">
                         <span class="font-bold text-lg text-white">Smart Solutions</span>
                     </div>
                     <p class="text-sm max-w-md" style="color: #9c9690;">Увеличиваем прибыль компаний через маркетинг, IT
@@ -559,6 +573,33 @@
         </div>
     </footer>
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var swiper = new Swiper(".custom-swiper", {
+                loop: true,
+                spaceBetween: 30,
+                effect: "fade", // Красивое исчезновение вместо прокрутки, можно поменять на slide
+                fadeEffect: { crossFade: true },
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: true, // Остановить автопрокрутку, если юзер кликнул
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                keyboard: {
+                    enabled: true,
+                },
+                grabCursor: true // Курсор-рука
+            });
+        });
+    </script>
 </body>
 
 </html>
