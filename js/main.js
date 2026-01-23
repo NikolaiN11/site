@@ -282,15 +282,15 @@ function initWebpSwap() {
         const webpSrc = src.replace(/\.(png|jpe?g)$/i, '.webp');
         if (webpSrc === src) return;
 
-        img.dataset.srcOriginal = src;
-        img.addEventListener('error', () => {
-            if (img.dataset.srcOriginal) {
-                img.setAttribute('src', img.dataset.srcOriginal);
-                img.removeAttribute('data-src-original');
-            }
-        }, { once: true });
-
-        img.setAttribute('src', webpSrc);
+        const probe = new Image();
+        probe.onload = () => {
+            img.dataset.srcOriginal = src;
+            img.setAttribute('src', webpSrc);
+        };
+        probe.onerror = () => {
+            // Keep original if WebP is missing
+        };
+        probe.src = webpSrc;
     });
 }
 
@@ -335,6 +335,14 @@ function initLightbox() {
     };
 
     images.forEach(img => {
+        const frame = img.closest('.image-frame');
+        if (frame) {
+            frame.classList.add('is-clickable');
+        }
+        const windowFrame = img.closest('.software-window');
+        if (windowFrame) {
+            windowFrame.classList.add('is-clickable');
+        }
         if (!img.getAttribute('tabindex')) {
             img.setAttribute('tabindex', '0');
         }
