@@ -1523,13 +1523,28 @@ textarea:focus {
     background-clip: text;
 }
 
+.stat-value .stat-suffix {
+    margin-left: 0.4rem;
+    display: inline-block;
+}
+
+.stat-value--text {
+    background: none;
+    -webkit-text-fill-color: initial;
+    color: var(--color-text);
+}
+
 .stat-label {
-    font-size: 0.875rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--color-text-secondary);
-    margin-bottom: 8px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--color-text);
+    margin-top: 8px;
+}
+
+
+.metric-text {
+    font-size: 1.125rem !important;
 }
 
 /* --- Enhanced Card Hover with Tilt --- */
