@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://smsol.su/sitemap.xml
