@@ -1679,6 +1679,16 @@ textarea:focus {
 .hero-fact-card .text-sm {
     font-size: 1.15rem;
     line-height: 1.45;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+@media (max-width: 520px) {
+    .hero-fact-card .text-sm {
+        font-size: 1.02rem;
+        line-height: 1.4;
+    }
 }
 
 .hero-fact-card::before {
