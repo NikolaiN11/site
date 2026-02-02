@@ -1691,6 +1691,55 @@ textarea:focus {
     }
 }
 
+/* --- Contact Pills --- */
+.contact-inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+}
+
+.contact-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 18px;
+    border-radius: 999px;
+    background: #ffffff;
+    border: 1px solid #e9e2db;
+    color: var(--color-text);
+    font-weight: 600;
+    font-size: 1.05rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.contact-pill:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 12px 26px rgba(181, 112, 77, 0.2);
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+
+.contact-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--color-accent-light);
+    color: var(--color-accent);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 640px) {
+    .contact-pill {
+        width: 100%;
+        max-width: 360px;
+        justify-content: center;
+    }
+}
+
 .hero-fact-card::before {
     content: '';
     position: absolute;
